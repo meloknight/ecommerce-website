@@ -94,7 +94,6 @@ nav {
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .home {
-  // background-color: greenyellow;
   width: 100vw;
   display: grid;
   justify-content: center;
@@ -103,9 +102,7 @@ nav {
 }
 
 .home-item-container {
-  // max-width: 1200px;
   width: 1200px;
-  // border: 2px solid black;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -113,7 +110,6 @@ nav {
 }
 
 .home-item-container > div {
-  // border: 1px solid black;
   background-position: center center;
   background-size: 150%;
   position: relative;
@@ -151,19 +147,38 @@ nav {
 .home-live-comfortably {
   grid-area: 1 / 1 / 3 / 2;
   background: url("src/assets/beautiful-cozy-livingroom-977066343.png");
+  // height: 550px;
+  // overflow: hidden;
+  // img {
+  //   height: 800px;
 }
 
 .home-skincare {
   grid-area: 1 / 2 / 3 / 3;
   background: url("https://minimalist-e-commerce.vercel.app/static/media/home-img-2.4daa711cfda65062efd0.jpg");
+  // height: 550px;
+  // overflow: hidden;
+  // img {
+  // height: 800px;
+  // }
 }
 
 .home-kitchen {
   background: url("https://minimalist-e-commerce.vercel.app/static/media/home-img-3.60734311499ba1dbbc41.jpg");
+  // height: 225px;
+  // overflow: hidden;
+  // img {
+  //   height: 800px;
+  // }
 }
 
 .home-electronics {
   background: url("https://minimalist-e-commerce.vercel.app/static/media/home-img-4.672d1d0d7656e2a778f6.jpg");
+  // height: 225px;
+  // overflow: hidden;
+  // img {
+  //   height: 800px;
+  // }
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -212,11 +227,18 @@ nav {
 }
 
 .proud-top-container {
+  position: relative;
   width: 100%;
   height: 78%;
-  background: url("https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg");
-  background-position: center center;
-  background-size: 100%;
+  overflow: hidden;
+  // background: url("https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg");
+  // background-position: center center;
+  // background-size: 100%;
+  img {
+    position: absolute;
+    height: 120%;
+    top: -20px;
+  }
 }
 
 .proud-bottom-container {
@@ -253,6 +275,34 @@ nav {
 .banner-container > div {
   border: 1px solid red;
   height: 100%;
+}
+
+.banner-right-container {
+  position: relative;
+
+  overflow: hidden;
+  // background: url("https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg");
+  // background-position: center center;
+  // background-size: 100%;
+  img {
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.banner-left-container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-left-inner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 16px;
+  width: 450px;
+  border: 2px solid red;
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
