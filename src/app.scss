@@ -215,7 +215,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 130px 0;
+  margin-top: 130px;
 }
 
 .proud-of-centering-container {
@@ -249,7 +249,7 @@ nav {
   // background-color: rgb(241, 241, 241);
 }
 
-.proud-top-container {
+.proud-card-top-container {
   position: relative;
   width: 100%;
   height: 78%;
@@ -264,13 +264,12 @@ nav {
   }
 }
 
-.proud-bottom-container {
+.proud-card-bottom-container {
   display: flex;
   flex-direction: column;
   height: 22%;
   justify-content: space-between;
   padding: 5px;
-  // border: 2px solid black;
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -282,7 +281,6 @@ $banner-color: rgb(222, 226, 233);
 .banner {
   width: 100vw;
   height: 400px;
-  // background-color: rgb(230, 230, 230);
   margin: 120px 0;
   display: grid;
   justify-content: center;
@@ -290,7 +288,6 @@ $banner-color: rgb(222, 226, 233);
 }
 
 .banner-container {
-  // border: 2px solid black;
   height: 100%;
   width: 1200px;
   display: grid;
@@ -298,13 +295,11 @@ $banner-color: rgb(222, 226, 233);
 }
 
 .banner-container > div {
-  // border: 1px solid red;
   height: 100%;
 }
 
 .banner-image-container {
   position: relative;
-
   overflow: hidden;
   // background: url("https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg");
   // background-position: center center;
@@ -358,9 +353,8 @@ $banner-color: rgb(222, 226, 233);
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .trending {
-  // height: 400px;
   width: 100vw;
-  background-color: aliceblue;
+  // background-color: aliceblue;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -368,14 +362,14 @@ $banner-color: rgb(222, 226, 233);
 }
 
 .trending-container {
-  border: 2px solid black;
+  // border: 2px solid black;
   height: 100%;
   width: 1200px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   gap: 50px;
-  // justify-content: center;
+  // position: relative;
   overflow-x: hidden;
 }
 
@@ -388,27 +382,66 @@ $banner-color: rgb(222, 226, 233);
 }
 
 .trending-top-right-container {
-  // border: 2px solid black;
-
   display: flex;
   gap: 5px;
 }
 
 .trending-top-right-container > button {
-  background-color: grey;
-  padding: 10px 15px;
+  background-color: rgb(73, 73, 73);
+  color: white;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  font-size: 3rem;
+}
+
+.trending-top-right-container > button:hover {
+  background-color: rgb(24, 24, 24);
 }
 
 .trending-bottom-container {
   display: flex;
-  flex-direction: row;
   gap: 10px;
+  // border: 2px solid red;
+  // transform: translateX(230px);
+  transition: all 0.3s ease;
 }
 
-.trending-bottom-card {
+.trending-product-card {
   height: 300px;
   width: 230px;
-  border: 2px solid grey;
+  border: 3px solid rgb(185, 185, 185);
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.trending-product-card:hover {
+  border: 3px solid black;
+  // background-color: rgb(241, 241, 241);
+}
+
+.trending-card-top-container {
+  position: relative;
+  width: 100%;
+  height: 78%;
+  overflow: hidden;
+  // background: url("https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg");
+  // background-position: center center;
+  // background-size: 100%;
+  img {
+    position: absolute;
+    height: 120%;
+    top: -20px;
+  }
+}
+
+.trending-card-bottom-container {
+  display: flex;
+  flex-direction: column;
+  height: 22%;
+  justify-content: space-between;
+  padding: 5px;
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -445,6 +478,7 @@ $banner-color: rgb(222, 226, 233);
       input,
       button {
         padding: 8px;
+        outline: none;
       }
     }
   }
