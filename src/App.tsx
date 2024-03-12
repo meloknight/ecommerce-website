@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import "./app.scss";
 
 function App() {
@@ -17,26 +18,53 @@ function App() {
     );
   }
 
+  const Navbar = () => {
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        const scrolled = window.scrollY > 0;
+        setIsScrolled(scrolled);
+      };
+
+      window.addEventListener("scroll", handleScroll);
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, []);
+
+    const navbarStyle = {
+      height: isScrolled ? "100px" : "135px",
+      transition: "all 0.2s",
+    };
+
+    return (
+      <>
+        <nav style={navbarStyle}>
+          <div className="nav-container">
+            <div className="nav-left">
+              <button className="nav-button-left">
+                <div className="nav-logo">MIN</div>
+                {/* <img src="#" alt="logo" className="nav-logo" /> */}
+              </button>
+            </div>
+            <div className="nav-right">
+              <button className="nav-buttons">CATEGORIES</button>
+              <button className="nav-buttons">PRODUCT PAGE</button>
+              <button className="nav-buttons">[]/</button>
+            </div>
+          </div>
+        </nav>
+        {/* <div className="nav-underline"></div> */}
+      </>
+    );
+  };
+
   return (
     <>
       {/* NAV SECTION */}
-
-      <nav>
-        <div className="nav-container">
-          <div className="nav-left">
-            <button className="nav-button-left">
-              <div className="nav-logo">MIN</div>
-              {/* <img src="#" alt="logo" className="nav-logo" /> */}
-            </button>
-          </div>
-          <div className="nav-right">
-            <button className="nav-buttons">CATEGORIES</button>
-            <button className="nav-buttons">PRODUCT PAGE</button>
-            <button className="nav-buttons">[]/</button>
-          </div>
-        </div>
-      </nav>
-      <div className="nav-underline"></div>
+      <Navbar />
 
       {/* HOME SECTION */}
 
@@ -130,8 +158,8 @@ function App() {
 
         <section className="banner">
           <div className="banner-container">
-            <div className="banner-left-container">
-              <div className="banner-left-inner-container">
+            <div className="banner-content-container">
+              <div className="banner-content-inner-container">
                 <h1>Creative harmonious living</h1>
                 <p>
                   MIN products are all amde to standard sizes so that you can
@@ -140,7 +168,7 @@ function App() {
                 <button>SHOP NOW</button>
               </div>
             </div>
-            <div className="banner-right-container">
+            <div className="banner-image-container">
               <img
                 src="https://minimalist-e-commerce.vercel.app/static/media/banner2.03a2ebf8d998e53d1019.jpg"
                 alt="bookshelf filler image"
