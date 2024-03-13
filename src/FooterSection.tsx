@@ -1,16 +1,23 @@
+import { scrollToTop } from "./reusableFunctions";
+
 export default function FooterSection() {
   return (
     <footer>
       <div className="footer-container">
         <div className="footer-top-container">
-          <button>About</button>
-          <button>Store Locator</button>
-          <button>FAQs</button>
-          <button>News</button>
-          <button>Careers</button>
-          <button>Contact Us</button>
+          <button onClick={scrollToTop}>About</button>
+          <button onClick={scrollToTop}>Store Locator</button>
+          <button onClick={scrollToTop}>FAQs</button>
+          <button onClick={scrollToTop}>News</button>
+          <button onClick={scrollToTop}>Careers</button>
+          <button onClick={scrollToTop}>Contact Us</button>
         </div>
-        <div className="footer-bottom-container">Design by Abderraouf</div>
+        <div className="footer-bottom-container">
+          Design &nbsp;by
+          <a href="https://github.com/Abderraouf-Rahmani/ecommerce">
+            &nbsp; Abderraouf
+          </a>
+        </div>
       </div>
     </footer>
   );

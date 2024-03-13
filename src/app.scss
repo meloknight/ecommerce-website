@@ -507,10 +507,18 @@ footer {
 
     .footer-top-container {
       display: flex;
-      gap: 16px;
+      gap: 28px;
 
       button {
         background: none;
+        color: white;
+        font-size: 1.1rem;
+      }
+    }
+
+    .footer-bottom-container {
+      a {
+        text-decoration: none;
         color: white;
       }
     }
