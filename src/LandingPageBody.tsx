@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ProductCard from "./ProductCard";
 
 import {
   MdOutlineKeyboardArrowLeft,
@@ -7,9 +8,7 @@ import {
 
 export default function LandingPageBody() {
   const singleTrendingCardOffset: number = 240;
-  const [trendingOffset, setTrendingOffset] = useState(
-    singleTrendingCardOffset
-  );
+  const [trendingOffset, setTrendingOffset] = useState(0);
 
   function offsetTrendingLeft() {
     if (trendingOffset < 0) {
@@ -21,22 +20,6 @@ export default function LandingPageBody() {
     if (trendingOffset > -4 * singleTrendingCardOffset) {
       setTrendingOffset(trendingOffset - 240);
     }
-  }
-
-  function ProductCard(props: any) {
-    return (
-      <>
-        <div className={`${props.cardType}-product-card`}>
-          <div className={`${props.cardType}-card-top-container`}>
-            <img src={props.productImage} alt={props.productName} />
-          </div>
-          <div className={`${props.cardType}-card-bottom-container`}>
-            <h3>{props.productName}</h3>
-            <h2>${props.productPrice}</h2>
-          </div>
-        </div>
-      </>
-    );
   }
 
   return (

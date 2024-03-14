@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import { FaShoppingCart } from "react-icons/fa";
 
-export default function Navbar() {
+export default function Navbar(props: any) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -34,9 +34,21 @@ export default function Navbar() {
             </button>
           </div>
           <div className="nav-right">
-            <button className="nav-buttons">CATEGORIES</button>
+            <button
+              onClick={() => {
+                props.setPage("CategoriesPage");
+              }}
+              className="nav-buttons"
+            >
+              CATEGORIES
+            </button>
             <button className="nav-buttons">PRODUCT PAGE</button>
-            <button className="nav-buttons">
+            <button
+              className="nav-buttons"
+              onClick={() => {
+                props.toggleModal();
+              }}
+            >
               <FaShoppingCart />
             </button>
           </div>
