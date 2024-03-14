@@ -579,6 +579,14 @@ footer {
   width: 100%;
   border: 2px solid black;
   background-color: rgb(233, 233, 233);
+  display: flex;
+
+  > div {
+    border: 2px solid red;
+  }
+
+  .shopping-cart-card-left-container {
+  }
 }
 
 .shopping-cart-modal-subtotal-container {
