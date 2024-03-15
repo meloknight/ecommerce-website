@@ -164,4 +164,139 @@ export const productInfo: any[] = [
     thirdProductImage:
       "public/assets/product-images/mat-black-lamp/mat-black-lamp-3.webp",
   },
+  {
+    productId: 12,
+    productType: "Chairs",
+    productName: "Oak Spanish Chair",
+    productPrice: 635,
+    productTexture: "Wood",
+    productWeightInLbs: 75,
+    productSize: "60cm x 60cm",
+    firstProductImage:
+      "public/assets/product-images/oak-spanish-chair/oak-spanish-chair-1.png",
+    secondProductImage:
+      "public/assets/product-images/oak-spanish-chair/oak-spanish-chair-2.webp",
+    thirdProductImage:
+      "public/assets/product-images/oak-spanish-chair/oak-spanish-chair-3.webp",
+  },
+  {
+    productId: 13,
+    productType: "Kitchen",
+    productName: "Pop-Up Toaster",
+    productPrice: 50,
+    productTexture: "Plastic",
+    productWeightInLbs: 4,
+    productSize: "20cm x 10cm",
+    firstProductImage:
+      "public/assets/product-images/pop-up-toaster/pop-up-toaster-1.jpg",
+    secondProductImage:
+      "public/assets/product-images/pop-up-toaster/pop-up-toaster-2.jpg",
+    thirdProductImage:
+      "public/assets/product-images/pop-up-toaster/pop-up-toaster-3.jpg",
+  },
+  {
+    productId: 14,
+    productType: "Furniture",
+    productName: "Pulp Unit 5 compartment",
+    productPrice: 155,
+    productTexture: "Wood",
+    productWeightInLbs: 30,
+    productSize: "60cm x 60cm",
+    firstProductImage:
+      "public/assets/product-images/pulp-unit-5-compartment/pulp-unit-5-compartment-1.jpeg",
+    secondProductImage:
+      "public/assets/product-images/pulp-unit-5-compartment/pulp-unit-5-compartment-2.jpg",
+    thirdProductImage:
+      "public/assets/product-images/pulp-unit-5-compartment/pulp-unit-5-compartment-3.jpg",
+  },
+  {
+    productId: 15,
+    productType: "Electronics",
+    productName: "Remote Sensor Light",
+    productPrice: 80,
+    productTexture: "metal",
+    productWeightInLbs: 5,
+    productSize: "12cm x 12cm",
+    firstProductImage:
+      "public/assets/product-images/remote-sensor-light/remote-sensor-light-1.jpg",
+    secondProductImage:
+      "public/assets/product-images/remote-sensor-light/remote-sensor-light-2.webp",
+    thirdProductImage:
+      "public/assets/product-images/remote-sensor-light/remote-sensor-light-3.webp",
+  },
+  {
+    productId: 16,
+    productType: "Lamps",
+    productName: "Simple Golden Lamp",
+    productPrice: 166,
+    productTexture: "Plastic",
+    productWeightInLbs: 8,
+    productSize: "20cm x 20cm",
+    firstProductImage:
+      "public/assets/product-images/simple-golden-lamp/simple-golden-lamp-1.png",
+    secondProductImage:
+      "public/assets/product-images/simple-golden-lamp/simple-golden-lamp-2.webp",
+    thirdProductImage:
+      "public/assets/product-images/simple-golden-lamp/simple-golden-lamp-3.webp",
+  },
+  {
+    productId: 17,
+    productType: "Lamps",
+    productName: "Table Lamp",
+    productPrice: 65,
+    productTexture: "Plastic",
+    productWeightInLbs: 4,
+    productSize: "12cm x 12cm",
+    firstProductImage:
+      "public/assets/product-images/table-lamp/table-lamp-1.png",
+    secondProductImage:
+      "public/assets/product-images/table-lamp/table-lamp-2.webp",
+    thirdProductImage:
+      "public/assets/product-images/table-lamp/table-lamp-3.webp",
+  },
+  {
+    productId: 18,
+    productType: "Lamps",
+    productName: "The Sun Pendant Black",
+    productPrice: 166,
+    productTexture: "Plastic",
+    productWeightInLbs: 10,
+    productSize: "20cm x 20cm",
+    firstProductImage:
+      "public/assets/product-images/the-sun-pendant-black/the-sun-pendant-black-1.jpeg",
+    secondProductImage:
+      "public/assets/product-images/the-sun-pendant-black/the-sun-pendant-black-2.jpeg",
+    thirdProductImage:
+      "public/assets/product-images/the-sun-pendant-black/the-sun-pendant-black-3.jpeg",
+  },
+  {
+    productId: 19,
+    productType: "Chairs",
+    productName: "Traditional Chair",
+    productPrice: 330,
+    productTexture: "Wood",
+    productWeightInLbs: 35,
+    productSize: "60cm x 60cm",
+    firstProductImage:
+      "public/assets/product-images/traditional-chair/traditional-chair-1.jpg",
+    secondProductImage:
+      "public/assets/product-images/traditional-chair/traditional-chair-2.jpg",
+    thirdProductImage:
+      "public/assets/product-images/traditional-chair/traditional-chair-3.jpg",
+  },
+  {
+    productId: 20,
+    productType: "Skin Care",
+    productName: "Unbleached Cotton Pads 180",
+    productPrice: 35,
+    productTexture: "Cotton",
+    productWeightInLbs: 0.5,
+    productSize: "10cm x 10cm",
+    firstProductImage:
+      "public/assets/product-images/unbleached-cotton-pads-180/unbleached-cotton-pads-180-1.jpg",
+    secondProductImage:
+      "public/assets/product-images/unbleached-cotton-pads-180/unbleached-cotton-pads-180-2.jpg",
+    thirdProductImage:
+      "public/assets/product-images/unbleached-cotton-pads-180/unbleached-cotton-pads-180-3.jpg",
+  },
 ];
