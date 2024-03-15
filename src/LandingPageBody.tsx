@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ProductCard from "./ProductCard";
+import { productInfo as pInfo } from "./productInfo";
 
 import {
   MdOutlineKeyboardArrowLeft,
@@ -51,51 +52,51 @@ export default function LandingPageBody() {
           <div className="proud-of-card-container">
             <ProductCard
               cardType="proud"
-              productName="Fluffy Armchair"
-              productPrice="629"
-              productImage="https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg"
+              productName={pInfo[0].productName}
+              productPrice={pInfo[0].productPrice}
+              productImage={pInfo[0].firstProductImage}
             />
             <ProductCard
               cardType="proud"
-              productName="Fluffy Armchair"
-              productPrice="629"
-              productImage="https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg"
+              productName={pInfo[1].productName}
+              productPrice={pInfo[1].productPrice}
+              productImage={pInfo[1].firstProductImage}
             />
             <ProductCard
               cardType="proud"
-              productName="Fluffy Armchair"
-              productPrice="629"
-              productImage="https://minimalist-e-commerce.vercel.app/static/media/2.f312c91f99a2c3a60550.jpg"
+              productName={pInfo[2].productName}
+              productPrice={pInfo[2].productPrice}
+              productImage={pInfo[2].firstProductImage}
             />
             <ProductCard
               cardType="proud"
-              productName="Fluffy Armchair"
-              productPrice="629"
-              productImage="https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg"
+              productName={pInfo[3].productName}
+              productPrice={pInfo[3].productPrice}
+              productImage={pInfo[3].firstProductImage}
             />
             <ProductCard
               cardType="proud"
-              productName="Fluffy Armchair"
-              productPrice="629"
-              productImage="https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg"
+              productName={pInfo[4].productName}
+              productPrice={pInfo[4].productPrice}
+              productImage={pInfo[4].firstProductImage}
             />
             <ProductCard
               cardType="proud"
-              productName="Fluffy Armchair"
-              productPrice="629"
-              productImage="https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg"
+              productName={pInfo[5].productName}
+              productPrice={pInfo[5].productPrice}
+              productImage={pInfo[5].firstProductImage}
             />
             <ProductCard
               cardType="proud"
-              productName="Fluffy Armchair"
-              productPrice="629"
-              productImage="https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg"
+              productName={pInfo[6].productName}
+              productPrice={pInfo[6].productPrice}
+              productImage={pInfo[6].firstProductImage}
             />
             <ProductCard
               cardType="proud"
-              productName="Fluffy Armchair"
-              productPrice="629"
-              productImage="https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg"
+              productName={pInfo[9].productName}
+              productPrice={pInfo[9].productPrice}
+              productImage={pInfo[9].firstProductImage}
             />
           </div>
         </div>
@@ -155,57 +156,57 @@ export default function LandingPageBody() {
           >
             <ProductCard
               cardType="trending"
-              productName="Fluffy Armchair A"
-              productPrice="629"
-              productImage="https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg"
+              productName={pInfo[10].productName}
+              productPrice={pInfo[10].productPrice}
+              productImage={pInfo[10].firstProductImage}
             />
             <ProductCard
               cardType="trending"
-              productName="Fluffy Armchair B"
-              productPrice="629"
-              productImage="https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg"
+              productName={pInfo[11].productName}
+              productPrice={pInfo[11].productPrice}
+              productImage={pInfo[11].firstProductImage}
             />
             <ProductCard
               cardType="trending"
-              productName="Fluffy Armchair C"
-              productPrice="629"
-              productImage="https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg"
+              productName={pInfo[12].productName}
+              productPrice={pInfo[12].productPrice}
+              productImage={pInfo[12].firstProductImage}
             />
             <ProductCard
               cardType="trending"
-              productName="Fluffy Armchair D"
-              productPrice="629"
-              productImage="https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg"
+              productName={pInfo[13].productName}
+              productPrice={pInfo[13].productPrice}
+              productImage={pInfo[13].firstProductImage}
             />
             <ProductCard
               cardType="trending"
-              productName="Fluffy Armchair E"
-              productPrice="629"
-              productImage="https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg"
+              productName={pInfo[14].productName}
+              productPrice={pInfo[14].productPrice}
+              productImage={pInfo[14].firstProductImage}
             />
             <ProductCard
               cardType="trending"
-              productName="Fluffy Armchair F"
-              productPrice="629"
-              productImage="https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg"
+              productName={pInfo[15].productName}
+              productPrice={pInfo[15].productPrice}
+              productImage={pInfo[15].firstProductImage}
             />
             <ProductCard
               cardType="trending"
-              productName="Fluffy Armchair G"
-              productPrice="629"
-              productImage="https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg"
+              productName={pInfo[16].productName}
+              productPrice={pInfo[16].productPrice}
+              productImage={pInfo[16].firstProductImage}
             />
             <ProductCard
               cardType="trending"
-              productName="Fluffy Armchair H"
-              productPrice="629"
-              productImage="https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg"
+              productName={pInfo[17].productName}
+              productPrice={pInfo[17].productPrice}
+              productImage={pInfo[17].firstProductImage}
             />
             <ProductCard
               cardType="trending"
-              productName="Fluffy Armchair I"
-              productPrice="629"
-              productImage="https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg"
+              productName={pInfo[18].productName}
+              productPrice={pInfo[18].productPrice}
+              productImage={pInfo[18].firstProductImage}
             />
           </div>
         </div>

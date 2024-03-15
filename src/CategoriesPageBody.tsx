@@ -1,8 +1,22 @@
+import { useState } from "react";
+
 import ProductCard from "./ProductCard";
+import { productInfo as pInfo } from "./productInfo";
 
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 
 export default function CategoriesPageBody(props: any) {
+  const [categorySelected, setCategorySelected] = useState("All");
+  let filteredProductInfo;
+
+  if (categorySelected != "All") {
+    filteredProductInfo = pInfo.filter(
+      (item) => item.productType === categorySelected
+    );
+  } else {
+    filteredProductInfo = pInfo;
+  }
+
   return (
     <>
       <section className="categories-body-container">
@@ -21,57 +35,32 @@ export default function CategoriesPageBody(props: any) {
           <div></div>
         </div>
         <div className="categories-sorting-button-container">
-          <button>All</button>
-          <button>Furnitures</button>
-          <button>Electronics</button>
-          <button>Lamps</button>
-          <button>Kitchen</button>
-          <button>Chairs</button>
-          <button>Skin Care</button>
+          <button onClick={() => setCategorySelected("All")}>All</button>
+          <button onClick={() => setCategorySelected("Furniture")}>
+            Furniture
+          </button>
+          <button onClick={() => setCategorySelected("Electronics")}>
+            Electronics
+          </button>
+          <button onClick={() => setCategorySelected("Lamps")}>Lamps</button>
+          <button onClick={() => setCategorySelected("Kitchen")}>
+            Kitchen
+          </button>
+          <button onClick={() => setCategorySelected("Chairs")}>Chairs</button>
+          <button onClick={() => setCategorySelected("Skin Care")}>
+            Skin Care
+          </button>
         </div>
         <div className="categories-card-container">
-          <ProductCard
-            cardType="proud"
-            productName="Fluffy Armchair"
-            productPrice="629"
-            productImage="https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg"
-          />
-          <ProductCard
-            cardType="proud"
-            productName="Fluffy Armchair"
-            productPrice="629"
-            productImage="https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg"
-          />
-          <ProductCard
-            cardType="proud"
-            productName="Fluffy Armchair"
-            productPrice="629"
-            productImage="https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg"
-          />
-          <ProductCard
-            cardType="proud"
-            productName="Fluffy Armchair"
-            productPrice="629"
-            productImage="https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg"
-          />
-          <ProductCard
-            cardType="proud"
-            productName="Fluffy Armchair"
-            productPrice="629"
-            productImage="https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg"
-          />
-          <ProductCard
-            cardType="proud"
-            productName="Fluffy Armchair"
-            productPrice="629"
-            productImage="https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg"
-          />
-          <ProductCard
-            cardType="proud"
-            productName="Fluffy Armchair"
-            productPrice="629"
-            productImage="https://minimalist-e-commerce.vercel.app/static/media/1.122c04e77ef5da9e8406.jpg"
-          />
+          {filteredProductInfo.map((item) => (
+            <ProductCard
+              cardType="proud"
+              key={item.productId}
+              productName={item.productName}
+              productPrice={item.productPrice}
+              productImage={item.firstProductImage}
+            />
+          ))}
         </div>
       </section>
     </>
