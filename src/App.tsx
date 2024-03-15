@@ -4,6 +4,7 @@ import LandingPageBody from "./LandingPageBody";
 import NewsletterSection from "./NewsletterSection";
 import FooterSection from "./FooterSection";
 import CategoriesPageBody from "./CategoriesPageBody";
+import ShoppingCartProductCard from "./ShoppingCartProductCard";
 import "./app.scss";
 
 function ShoppingCartModal(props: any) {
@@ -33,26 +34,10 @@ function ShoppingCartModal(props: any) {
           </button>
         </div>
         <div className="shopping-cart-modal-product-list-container">
-          <div className="shopping-cart-product-card">
-            <div className="shopping-cart-card-left-container">
-              <img src="#" alt="" />
-            </div>
-            <div className="shopping-cart-card-center-container">
-              <div className="shopping-cart-card-product-name">
-                Pop-up Toaster
-              </div>
-              <div className="shopping-cart-card-product-amount-container">
-                -1+
-              </div>
-            </div>
-            <div className="shopping-cart-card-right-container">
-              <div>$45.00</div>
-              <button>X</button>
-            </div>
-          </div>
-          <div className="shopping-cart-product-card"></div>
-          <div className="shopping-cart-product-card"></div>
-          <div className="shopping-cart-product-card"></div>
+          <ShoppingCartProductCard />
+          <ShoppingCartProductCard />
+          <ShoppingCartProductCard />
+          <ShoppingCartProductCard />
         </div>
         <div className="shopping-cart-modal-subtotal-container">
           <div className="shopping-cart-subtotal-left-container">
