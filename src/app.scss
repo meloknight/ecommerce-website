@@ -152,20 +152,20 @@ nav {
 
 .home-live-comfortably {
   grid-area: 1 / 1 / 3 / 2;
-  background: url("src/assets/beautiful-cozy-livingroom-977066343.png");
+  background: url("public/assets/home-images/beautiful-cozy-livingroom-977066343.png");
 }
 
 .home-skincare {
   grid-area: 1 / 2 / 3 / 3;
-  background: url("https://minimalist-e-commerce.vercel.app/static/media/home-img-2.4daa711cfda65062efd0.jpg");
+  background: url("public/assets/home-images/home-img-2.4daa711cfda65062efd0.jpg");
 }
 
 .home-kitchen {
-  background: url("https://minimalist-e-commerce.vercel.app/static/media/home-img-3.60734311499ba1dbbc41.jpg");
+  background: url("public/assets/home-images/home-img-3.60734311499ba1dbbc41.jpg");
 }
 
 .home-electronics {
-  background: url("https://minimalist-e-commerce.vercel.app/static/media/home-img-4.672d1d0d7656e2a778f6.jpg");
+  background: url("public/assets/home-images/home-img-4.672d1d0d7656e2a778f6.jpg");
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -586,10 +586,6 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1.5fr 1fr;
   font-size: 1.2rem;
-
-  > div {
-    // border: 2px solid red;
-  }
   .shopping-cart-card-left-container {
     img {
       object-fit: cover;
