@@ -1,7 +1,7 @@
 export default function ProductCard(props: any) {
   return (
     <>
-      <div className={`${props.cardType}-product-card`}>
+      <button className={`${props.cardType}-product-card`}>
         <div className={`${props.cardType}-card-top-container`}>
           <img src={props.productImage} alt={props.productName} />
         </div>
@@ -9,7 +9,7 @@ export default function ProductCard(props: any) {
           <h3>{props.productName}</h3>
           <h2>${props.productPrice}</h2>
         </div>
-      </div>
+      </button>
     </>
   );
 }

@@ -28,9 +28,13 @@ export default function Navbar(props: any) {
       <nav style={navbarStyle}>
         <div className="nav-container">
           <div className="nav-left">
-            <button className="nav-button-left">
+            <button
+              onClick={() => {
+                props.setPage("landingPage");
+              }}
+              className="nav-button-left"
+            >
               <div className="nav-logo">MIN</div>
-              {/* <img src="#" alt="logo" className="nav-logo" /> */}
             </button>
           </div>
           <div className="nav-right">
@@ -44,7 +48,7 @@ export default function Navbar(props: any) {
             </button>
             <button className="nav-buttons">PRODUCT PAGE</button>
             <button
-              className="nav-buttons"
+              className="nav-buttons shopping-cart-icon"
               onClick={() => {
                 props.toggleModal();
               }}
