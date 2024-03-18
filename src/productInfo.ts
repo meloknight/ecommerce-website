@@ -1,4 +1,17 @@
-export const productInfo: any[] = [
+interface productInfoSingleItem {
+  productId: number;
+  productType: string;
+  productName: string;
+  productPrice: number;
+  productTexture: string;
+  productWeightInLbs: number;
+  productSize: string;
+  firstProductImage: string;
+  secondProductImage: string;
+  thirdProductImage: string;
+}
+
+export const productInfo: productInfoSingleItem[] = [
   {
     productId: 0,
     productType: "Lamps",

@@ -4,6 +4,7 @@ import { FaShoppingCart } from "react-icons/fa";
 
 export default function Navbar(props: any) {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [itemsInShoppingCart, setItemsInShoppingCart] = useState(9);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,17 +49,23 @@ export default function Navbar(props: any) {
             </button>
             <button className="nav-buttons">PRODUCT PAGE</button>
             <button
-              className="nav-buttons shopping-cart-icon"
+              className={`nav-buttons shopping-cart-icon`}
               onClick={() => {
                 props.toggleModal();
               }}
             >
+              {props.userShoppingCart.length ? (
+                <div className="shopping-cart-icon-counter">
+                  {props.userShoppingCart.length}
+                </div>
+              ) : (
+                ""
+              )}
               <FaShoppingCart />
             </button>
           </div>
         </div>
       </nav>
-      {/* <div className="nav-underline"></div> */}
     </>
   );
 }

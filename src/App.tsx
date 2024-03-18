@@ -4,58 +4,42 @@ import LandingPageBody from "./LandingPageBody";
 import NewsletterSection from "./NewsletterSection";
 import FooterSection from "./FooterSection";
 import CategoriesPageBody from "./CategoriesPageBody";
-import ShoppingCartProductCard from "./ShoppingCartProductCard";
+import ShoppingCartModal from "./ShoppingCartModal";
 import "./app.scss";
-
-function ShoppingCartModal(props: any) {
-  return (
-    <>
-      {props.shoppingCartModalOpen && (
-        <div
-          onClick={() => {
-            props.toggleModal();
-          }}
-          className="shopping-cart-modal-transparent-backdrop"
-        ></div>
-      )}
-      <div
-        className={`shopping-cart-modal-container ${
-          props.shoppingCartModalOpen && "shopping-cart-modal-container-active"
-        }`}
-      >
-        <div className="shopping-cart-modal-top-container">
-          <h1>Your Shopping Cart (0)</h1>
-          <button
-            onClick={() => {
-              props.toggleModal();
-            }}
-          >
-            X
-          </button>
-        </div>
-        <div className="shopping-cart-modal-product-list-container">
-          <ShoppingCartProductCard />
-          <ShoppingCartProductCard />
-          <ShoppingCartProductCard />
-          <ShoppingCartProductCard />
-        </div>
-        <div className="shopping-cart-modal-subtotal-container">
-          <div className="shopping-cart-subtotal-left-container">
-            <div>Subtotal</div>
-            <div>$45.00</div>
-          </div>
-          <div className="shopping-cart-subtotal-right-container">
-            <button>Go to Checkout</button>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
 
 function App() {
   const [shoppingCartModalOpen, setShoppingCartModalOpen] = useState(false);
   const [page, setPage] = useState("CategoriesPage");
+  const [userShoppingCart, setUserShoppingCart] = useState([
+    {
+      selectedProductId: 0,
+      quantitySelected: 2,
+    },
+    {
+      selectedProductId: 4,
+      quantitySelected: 2,
+    },
+    {
+      selectedProductId: 8,
+      quantitySelected: 2,
+    },
+    {
+      selectedProductId: 12,
+      quantitySelected: 2,
+    },
+    {
+      selectedProductId: 12,
+      quantitySelected: 2,
+    },
+    {
+      selectedProductId: 12,
+      quantitySelected: 2,
+    },
+    {
+      selectedProductId: 12,
+      quantitySelected: 2,
+    },
+  ]);
 
   const toggleModal = () => {
     setShoppingCartModalOpen(!shoppingCartModalOpen);
@@ -74,8 +58,13 @@ function App() {
       <ShoppingCartModal
         toggleModal={toggleModal}
         shoppingCartModalOpen={shoppingCartModalOpen}
+        userShoppingCart={userShoppingCart}
       />
-      <Navbar setPage={setPage} toggleModal={toggleModal} />
+      <Navbar
+        setPage={setPage}
+        toggleModal={toggleModal}
+        userShoppingCart={userShoppingCart}
+      />
       {pageBodyVisible}
       <NewsletterSection />
       <FooterSection />
