@@ -1,6 +1,6 @@
 import ShoppingCartProductCard from "./ShoppingCartProductCard";
 import { productInfo } from "./productInfo";
-
+// userShoppingCart was passed as a prop to ShoppingCartModal
 export default function ShoppingCartModal(props: any) {
   return (
     <>
@@ -29,7 +29,12 @@ export default function ShoppingCartModal(props: any) {
         </div>
         <div className="shopping-cart-modal-product-list-container">
           {props.userShoppingCart.map((item: any) => (
-            <ShoppingCartProductCard />
+            <ShoppingCartProductCard
+              key={item.selectedProductId}
+              setUserShoppingCart={props.setUserShoppingCart}
+              productInfo={productInfo}
+              item={item}
+            />
           ))}
         </div>
         <div className="shopping-cart-modal-subtotal-container">

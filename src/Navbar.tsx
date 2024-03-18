@@ -4,7 +4,7 @@ import { FaShoppingCart } from "react-icons/fa";
 
 export default function Navbar(props: any) {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [itemsInShoppingCart, setItemsInShoppingCart] = useState(9);
+  // const [itemsInShoppingCart, setItemsInShoppingCart] = useState(9);
 
   useEffect(() => {
     const handleScroll = () => {
