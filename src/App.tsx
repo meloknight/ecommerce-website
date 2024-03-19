@@ -8,6 +8,8 @@ import ShoppingCartModal from "./ShoppingCartModal";
 import TrendingSection from "./TrendingSection";
 import "./app.scss";
 
+import { productInfo as pInfo, productInfoItemInterface } from "./productInfo";
+
 export interface shoppingCartItemInterface {
   selectedProductId: number;
   quantitySelected: number;
@@ -27,7 +29,35 @@ function App() {
     setShoppingCartModalOpen(!shoppingCartModalOpen);
   };
 
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  // PRODUCT PAGE CODE
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  const [chosenProductId, setChosenProductId] = useState(5);
+
   function ProductPage() {
+    const currentSelectedProductInfo = pInfo.find(
+      (obj: productInfoItemInterface) => obj.productId === chosenProductId
+    );
+
+    const [currentImageHovered, setCurrentImageHovered] = useState(1);
+    const [
+      currentQuantityOfProductSelected,
+      setCurrentQuantityOfProductSelected,
+    ] = useState(4);
+
+    function updateMainProductImage() {
+      if (currentImageHovered === 1) {
+        return currentSelectedProductInfo?.firstProductImage;
+      } else if (currentImageHovered === 2) {
+        return currentSelectedProductInfo?.secondProductImage;
+      } else if (currentImageHovered === 3) {
+        return currentSelectedProductInfo?.thirdProductImage;
+      } else {
+        return currentSelectedProductInfo?.firstProductImage;
+      }
+    }
+
     return (
       <>
         <section className="product-page-container">
@@ -36,50 +66,61 @@ function App() {
               <div className="product-page-top-left">
                 <div className="product-page-main-image-container">
                   <img
-                    // src=""
-                    src="/assets/product-images/black-and-white-lamp/black-and-white-lamp-1.jpeg"
-                    alt=""
+                    src={updateMainProductImage()}
+                    alt={currentSelectedProductInfo?.productName}
                   />
                 </div>
                 <div className="product-page-secondary-images-container">
-                  <div className="first-product-image-container">
+                  <div
+                    className="first-product-image-container"
+                    onMouseEnter={() => setCurrentImageHovered(1)}
+                  >
                     <img
-                      src="/assets/product-images/black-and-white-lamp/black-and-white-lamp-1.jpeg"
-                      alt=""
+                      src={currentSelectedProductInfo?.firstProductImage}
+                      alt={currentSelectedProductInfo?.productName}
                     />
                   </div>
-                  <div className="second-product-image-container">
+                  <div
+                    className="second-product-image-container"
+                    onMouseEnter={() => setCurrentImageHovered(2)}
+                  >
                     <img
-                      src="/assets/product-images/black-and-white-lamp/black-and-white-lamp-1.jpeg"
-                      alt=""
+                      src={currentSelectedProductInfo?.secondProductImage}
+                      alt={currentSelectedProductInfo?.productName}
                     />
                   </div>
-                  <div className="third-product-image-container">
+                  <div
+                    className="third-product-image-container"
+                    onMouseEnter={() => setCurrentImageHovered(3)}
+                  >
                     <img
-                      src="/assets/product-images/black-and-white-lamp/black-and-white-lamp-1.jpeg"
-                      alt=""
+                      src={currentSelectedProductInfo?.thirdProductImage}
+                      alt={currentSelectedProductInfo?.productName}
                     />
                   </div>
                 </div>
               </div>
               <div className="product-page-top-right">
                 <h1 className="product-page-top-right-subsections">
-                  Comfy Chair
+                  {currentSelectedProductInfo?.productName}
                 </h1>
                 <p className="product-page-top-right-subsections">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Consequuntur voluptate dicta quas ex expedita, dolores ipsam
-                  voluptatibus, exercitationem nostrum vero nemo praesentium
-                  error quos sint.
+                  {currentSelectedProductInfo?.productDescription}
                 </p>
                 <div className="product-page-quantity-container product-page-top-right-subsections">
                   <div>Quantity</div>
                   <div className="product-page-quantity-selector">
                     <button>-</button>
-                    <div>1</div>
+                    <div>{currentQuantityOfProductSelected}</div>
                     <button>+</button>
                   </div>
-                  <div>$111.00</div>
+                  <div>
+                    $
+                    {currentSelectedProductInfo?.productPrice
+                      ? currentSelectedProductInfo.productPrice *
+                        currentQuantityOfProductSelected
+                      : 0}
+                  </div>
                 </div>
                 <div className="product-page-button-container product-page-top-right-subsections">
                   <button className="add-to-cart-button">ADD TO CART</button>
@@ -107,6 +148,10 @@ function App() {
       </>
     );
   }
+
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  // PRODUCT PAGE CODE END
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   let pageBodyVisible;
 
