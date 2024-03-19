@@ -34,6 +34,7 @@ function App() {
             <div className="product-page-top-left">
               <div className="product-page-main-image-container">
                 <img
+                  // src=""
                   src="/assets/product-images/black-and-white-lamp/black-and-white-lamp-1.jpeg"
                   alt=""
                 />
