@@ -56,6 +56,7 @@ export default function CategoriesPageBody(props: any) {
             <ProductCard
               cardType="proud"
               key={item.productId}
+              productId={item.productId}
               productName={item.productName}
               productPrice={item.productPrice}
               productImage={item.firstProductImage}

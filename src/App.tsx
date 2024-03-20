@@ -33,7 +33,7 @@ function App() {
   // PRODUCT PAGE CODE
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  const [chosenProductId, setChosenProductId] = useState(5);
+  const [chosenProductId, setChosenProductId] = useState(1);
 
   function ProductPage() {
     const currentSelectedProductInfo = pInfo.find(
@@ -131,20 +131,20 @@ function App() {
             <div className="product-page-bottom-container">
               <div className="product-texture-container">
                 <h2>Texture:</h2>
-                <p>Comfy Material</p>
+                <p>{currentSelectedProductInfo?.productTexture}</p>
               </div>
               <div className="product-texture-container">
-                <h2>Texture:</h2>
-                <p>Comfy Material</p>
+                <h2>Weight:</h2>
+                <p>{currentSelectedProductInfo?.productWeightInLbs} lbs</p>
               </div>
               <div className="product-texture-container">
-                <h2>Texture:</h2>
-                <p>Comfy Material</p>
+                <h2>Size:</h2>
+                <p>{currentSelectedProductInfo?.productSize}</p>
               </div>
             </div>
           </div>
         </section>
-        <TrendingSection />
+        <TrendingSection setChosenProductId={setChosenProductId} />
       </>
     );
   }
@@ -156,9 +156,16 @@ function App() {
   let pageBodyVisible;
 
   if (page === "landingPage") {
-    pageBodyVisible = <LandingPageBody />;
+    pageBodyVisible = (
+      <LandingPageBody setChosenProductId={setChosenProductId} />
+    );
   } else if (page === "CategoriesPage") {
-    pageBodyVisible = <CategoriesPageBody setPage={setPage} />;
+    pageBodyVisible = (
+      <CategoriesPageBody
+        setPage={setPage}
+        setChosenProductId={setChosenProductId}
+      />
+    );
   } else if (page === "ProductPage") {
     pageBodyVisible = <ProductPage />;
   }

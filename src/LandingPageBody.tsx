@@ -3,26 +3,26 @@ import ProductCard from "./ProductCard";
 import { productInfo as pInfo } from "./productInfo";
 import TrendingSection from "./TrendingSection";
 
-import {
-  MdOutlineKeyboardArrowLeft,
-  MdOutlineKeyboardArrowRight,
-} from "react-icons/md";
+// import {
+//   MdOutlineKeyboardArrowLeft,
+//   MdOutlineKeyboardArrowRight,
+// } from "react-icons/md";
 
-export default function LandingPageBody() {
-  const singleTrendingCardOffset: number = 240;
-  const [trendingOffset, setTrendingOffset] = useState(0);
+export default function LandingPageBody(props: any) {
+  // const singleTrendingCardOffset: number = 240;
+  // const [trendingOffset, setTrendingOffset] = useState(0);
 
-  function offsetTrendingLeft() {
-    if (trendingOffset < 0) {
-      setTrendingOffset(trendingOffset + 240);
-    }
-  }
+  // function offsetTrendingLeft() {
+  //   if (trendingOffset < 0) {
+  //     setTrendingOffset(trendingOffset + 240);
+  //   }
+  // }
 
-  function offsetTrendingRight() {
-    if (trendingOffset > -4 * singleTrendingCardOffset) {
-      setTrendingOffset(trendingOffset - 240);
-    }
-  }
+  // function offsetTrendingRight() {
+  //   if (trendingOffset > -4 * singleTrendingCardOffset) {
+  //     setTrendingOffset(trendingOffset - 240);
+  //   }
+  // }
 
   return (
     <main>
@@ -53,51 +53,67 @@ export default function LandingPageBody() {
           <div className="proud-of-card-container">
             <ProductCard
               cardType="proud"
+              productId={pInfo[0].productId}
               productName={pInfo[0].productName}
               productPrice={pInfo[0].productPrice}
               productImage={pInfo[0].firstProductImage}
+              setChosenProductId={props.setChosenProductId}
             />
             <ProductCard
               cardType="proud"
+              productId={pInfo[1].productId}
               productName={pInfo[1].productName}
               productPrice={pInfo[1].productPrice}
               productImage={pInfo[1].firstProductImage}
+              setChosenProductId={props.setChosenProductId}
             />
             <ProductCard
               cardType="proud"
+              productId={pInfo[2].productId}
               productName={pInfo[2].productName}
               productPrice={pInfo[2].productPrice}
               productImage={pInfo[2].firstProductImage}
+              setChosenProductId={props.setChosenProductId}
             />
             <ProductCard
               cardType="proud"
+              productId={pInfo[3].productId}
               productName={pInfo[3].productName}
               productPrice={pInfo[3].productPrice}
               productImage={pInfo[3].firstProductImage}
+              setChosenProductId={props.setChosenProductId}
             />
             <ProductCard
               cardType="proud"
+              productId={pInfo[4].productId}
               productName={pInfo[4].productName}
               productPrice={pInfo[4].productPrice}
               productImage={pInfo[4].firstProductImage}
+              setChosenProductId={props.setChosenProductId}
             />
             <ProductCard
               cardType="proud"
+              productId={pInfo[5].productId}
               productName={pInfo[5].productName}
               productPrice={pInfo[5].productPrice}
               productImage={pInfo[5].firstProductImage}
+              setChosenProductId={props.setChosenProductId}
             />
             <ProductCard
               cardType="proud"
+              productId={pInfo[6].productId}
               productName={pInfo[6].productName}
               productPrice={pInfo[6].productPrice}
               productImage={pInfo[6].firstProductImage}
+              setChosenProductId={props.setChosenProductId}
             />
             <ProductCard
               cardType="proud"
+              productId={pInfo[9].productId}
               productName={pInfo[9].productName}
               productPrice={pInfo[9].productPrice}
               productImage={pInfo[9].firstProductImage}
+              setChosenProductId={props.setChosenProductId}
             />
           </div>
         </div>
@@ -128,7 +144,7 @@ export default function LandingPageBody() {
 
       {/* TRENDING SECTION */}
 
-      <TrendingSection />
+      <TrendingSection setChosenProductId={props.setChosenProductId} />
 
       {/* BANNER 2 SECTION */}
 

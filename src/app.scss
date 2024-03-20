@@ -567,13 +567,13 @@ footer {
       display: grid;
       grid-template-columns: 1fr 1fr;
       .product-page-top-left {
-        border: 1px solid red;
+        // border: 1px solid red;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         .product-page-main-image-container {
-          background-color: lightblue;
+          // background-color: lightblue;
           height: 500px;
           width: 400px;
           // overflow: hidden;
@@ -588,7 +588,7 @@ footer {
           }
         }
         .product-page-secondary-images-container {
-          border: 2px solid green;
+          // border: 2px solid green;
           height: 200px;
           display: flex;
           align-items: center;
@@ -606,7 +606,8 @@ footer {
             }
           }
           > div:hover {
-            border: 2px solid black;
+            border: 2px solid lightgrey;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
           }
         }
       }
@@ -705,6 +706,7 @@ footer {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin-bottom: 60px;
       div {
         width: 20vw;
         background-color: lightgrey;

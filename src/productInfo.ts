@@ -263,7 +263,7 @@ export const productInfo: productInfoItemInterface[] = [
     secondProductImage:
       "/assets/product-images/remote-sensor-light/remote-sensor-light-2.webp",
     thirdProductImage:
-      "/assets/product-images/remote-sensor-light/remote-sensor-light-3.webp",
+      "/assets/product-images/remote-sensor-light/remote-sensor-light-3.jpg",
   },
   {
     productId: 15,
@@ -309,9 +309,9 @@ export const productInfo: productInfoItemInterface[] = [
     firstProductImage:
       "/assets/product-images/the-sun-pendant-black/the-sun-pendant-black-1.jpeg",
     secondProductImage:
-      "/assets/product-images/the-sun-pendant-black/the-sun-pendant-black-2.jpeg",
+      "/assets/product-images/the-sun-pendant-black/the-sun-pendant-black-2.webp",
     thirdProductImage:
-      "/assets/product-images/the-sun-pendant-black/the-sun-pendant-black-3.jpeg",
+      "/assets/product-images/the-sun-pendant-black/the-sun-pendant-black-3.jpg",
   },
   {
     productId: 18,
@@ -326,9 +326,9 @@ export const productInfo: productInfoItemInterface[] = [
     firstProductImage:
       "/assets/product-images/traditional-chair/traditional-chair-1.jpg",
     secondProductImage:
-      "/assets/product-images/traditional-chair/traditional-chair-2.jpg",
+      "/assets/product-images/traditional-chair/traditional-chair-2.webp",
     thirdProductImage:
-      "/assets/product-images/traditional-chair/traditional-chair-3.jpg",
+      "/assets/product-images/traditional-chair/traditional-chair-3.webp",
   },
   {
     productId: 19,
