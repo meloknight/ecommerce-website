@@ -2,6 +2,24 @@ import ShoppingCartProductCard from "./ShoppingCartProductCard";
 import { productInfo } from "./productInfo";
 // userShoppingCart was passed as a prop to ShoppingCartModal
 export default function ShoppingCartModal(props: any) {
+  // console.log(props);
+
+  function shoppingCartSubtotal(): number {
+    if (props.userShoppingCart !== false) {
+      let sum: number = 0;
+      for (let i = 0; i < props.userShoppingCart.length; i++) {
+        let id: number = props.userShoppingCart[i].selectedProductId;
+        const prePrice: any = props.pInfo.find(
+          (product: any) => product.productId === id
+        );
+        const price: number = prePrice.productPrice;
+        sum += props.userShoppingCart[i].quantitySelected * price;
+      }
+      return sum;
+    }
+    return 0;
+  }
+
   return (
     <>
       {props.shoppingCartModalOpen && (
@@ -18,7 +36,7 @@ export default function ShoppingCartModal(props: any) {
         }`}
       >
         <div className="shopping-cart-modal-top-container">
-          <h1>Your Shopping Cart (0)</h1>
+          <h1>Your Shopping Cart</h1>
           <button
             onClick={() => {
               props.toggleModal();
@@ -40,7 +58,7 @@ export default function ShoppingCartModal(props: any) {
         <div className="shopping-cart-modal-subtotal-container">
           <div className="shopping-cart-subtotal-left-container">
             <div>Subtotal</div>
-            <div>$45.00</div>
+            <div>${shoppingCartSubtotal()}</div>
           </div>
           <div className="shopping-cart-subtotal-right-container">
             <button>Go to Checkout</button>

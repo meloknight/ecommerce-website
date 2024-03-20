@@ -59,6 +59,7 @@ export default function TrendingSection(props: any) {
             productPrice={pInfo[10].productPrice}
             productImage={pInfo[10].firstProductImage}
             setChosenProductId={props.setChosenProductId}
+            setPage={props.setPage}
           />
           <ProductCard
             cardType="trending"
@@ -67,6 +68,7 @@ export default function TrendingSection(props: any) {
             productPrice={pInfo[11].productPrice}
             productImage={pInfo[11].firstProductImage}
             setChosenProductId={props.setChosenProductId}
+            setPage={props.setPage}
           />
           <ProductCard
             cardType="trending"
@@ -75,6 +77,7 @@ export default function TrendingSection(props: any) {
             productPrice={pInfo[12].productPrice}
             productImage={pInfo[12].firstProductImage}
             setChosenProductId={props.setChosenProductId}
+            setPage={props.setPage}
           />
           <ProductCard
             cardType="trending"
@@ -83,6 +86,7 @@ export default function TrendingSection(props: any) {
             productPrice={pInfo[13].productPrice}
             productImage={pInfo[13].firstProductImage}
             setChosenProductId={props.setChosenProductId}
+            setPage={props.setPage}
           />
           <ProductCard
             cardType="trending"
@@ -91,6 +95,7 @@ export default function TrendingSection(props: any) {
             productPrice={pInfo[14].productPrice}
             productImage={pInfo[14].firstProductImage}
             setChosenProductId={props.setChosenProductId}
+            setPage={props.setPage}
           />
           <ProductCard
             cardType="trending"
@@ -99,6 +104,7 @@ export default function TrendingSection(props: any) {
             productPrice={pInfo[15].productPrice}
             productImage={pInfo[15].firstProductImage}
             setChosenProductId={props.setChosenProductId}
+            setPage={props.setPage}
           />
           <ProductCard
             cardType="trending"
@@ -107,6 +113,7 @@ export default function TrendingSection(props: any) {
             productPrice={pInfo[16].productPrice}
             productImage={pInfo[16].firstProductImage}
             setChosenProductId={props.setChosenProductId}
+            setPage={props.setPage}
           />
           <ProductCard
             cardType="trending"
@@ -115,6 +122,7 @@ export default function TrendingSection(props: any) {
             productPrice={pInfo[17].productPrice}
             productImage={pInfo[17].firstProductImage}
             setChosenProductId={props.setChosenProductId}
+            setPage={props.setPage}
           />
           <ProductCard
             cardType="trending"
@@ -123,6 +131,7 @@ export default function TrendingSection(props: any) {
             productPrice={pInfo[18].productPrice}
             productImage={pInfo[18].firstProductImage}
             setChosenProductId={props.setChosenProductId}
+            setPage={props.setPage}
           />
         </div>
       </div>

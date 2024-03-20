@@ -60,6 +60,8 @@ export default function CategoriesPageBody(props: any) {
               productName={item.productName}
               productPrice={item.productPrice}
               productImage={item.firstProductImage}
+              setPage={props.setPage}
+              setChosenProductId={props.setChosenProductId}
             />
           ))}
         </div>

@@ -20,11 +20,14 @@ function App() {
   const [page, setPage] = useState("ProductPage");
   const [userShoppingCart, setUserShoppingCart] = useState([
     {
-      selectedProductId: 0,
+      selectedProductId: 1,
       quantitySelected: 2,
     },
+    {
+      selectedProductId: 4,
+      quantitySelected: 6,
+    },
   ]);
-
   const toggleModal = () => {
     setShoppingCartModalOpen(!shoppingCartModalOpen);
   };
@@ -33,9 +36,9 @@ function App() {
   // PRODUCT PAGE CODE
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  const [chosenProductId, setChosenProductId] = useState(1);
+  const [chosenProductId, setChosenProductId] = useState(4);
 
-  function ProductPage() {
+  function ProductPage(props: any) {
     const currentSelectedProductInfo = pInfo.find(
       (obj: productInfoItemInterface) => obj.productId === chosenProductId
     );
@@ -44,7 +47,43 @@ function App() {
     const [
       currentQuantityOfProductSelected,
       setCurrentQuantityOfProductSelected,
-    ] = useState(4);
+    ] = useState(1);
+
+    const incrementQuantity = () => {
+      setCurrentQuantityOfProductSelected(currentQuantityOfProductSelected + 1);
+    };
+    const decrementQuantity = () => {
+      if (currentQuantityOfProductSelected > 1) {
+        setCurrentQuantityOfProductSelected(
+          currentQuantityOfProductSelected - 1
+        );
+      }
+    };
+
+    function addItemToShoppingCart() {
+      let isItemInList: boolean = false;
+      const newItem = {
+        selectedProductId: currentSelectedProductInfo?.productId,
+        quantitySelected: currentQuantityOfProductSelected,
+      };
+
+      const updatedItems = props.userShoppingCart.map((item: any) => {
+        if (item.selectedProductId === newItem.selectedProductId) {
+          isItemInList = true;
+          return {
+            selectedProductId: item.selectedProductId,
+            quantitySelected: item.quantitySelected + newItem.quantitySelected,
+          };
+        }
+        return item;
+      });
+
+      if (isItemInList === false) {
+        updatedItems.push(newItem);
+      }
+
+      props.setUserShoppingCart(updatedItems);
+    }
 
     function updateMainProductImage() {
       if (currentImageHovered === 1) {
@@ -110,9 +149,9 @@ function App() {
                 <div className="product-page-quantity-container product-page-top-right-subsections">
                   <div>Quantity</div>
                   <div className="product-page-quantity-selector">
-                    <button>-</button>
+                    <button onClick={decrementQuantity}>-</button>
                     <div>{currentQuantityOfProductSelected}</div>
-                    <button>+</button>
+                    <button onClick={incrementQuantity}>+</button>
                   </div>
                   <div>
                     $
@@ -123,7 +162,12 @@ function App() {
                   </div>
                 </div>
                 <div className="product-page-button-container product-page-top-right-subsections">
-                  <button className="add-to-cart-button">ADD TO CART</button>
+                  <button
+                    onClick={addItemToShoppingCart}
+                    className="add-to-cart-button"
+                  >
+                    ADD TO CART
+                  </button>
                   <button className="buy-now-button">BUY NOW</button>
                 </div>
               </div>
@@ -144,7 +188,10 @@ function App() {
             </div>
           </div>
         </section>
-        <TrendingSection setChosenProductId={setChosenProductId} />
+        <TrendingSection
+          setChosenProductId={setChosenProductId}
+          setPage={props.setPage}
+        />
       </>
     );
   }
@@ -157,17 +204,26 @@ function App() {
 
   if (page === "landingPage") {
     pageBodyVisible = (
-      <LandingPageBody setChosenProductId={setChosenProductId} />
+      <LandingPageBody
+        setChosenProductId={setChosenProductId}
+        setPage={setPage}
+      />
     );
   } else if (page === "CategoriesPage") {
     pageBodyVisible = (
       <CategoriesPageBody
-        setPage={setPage}
         setChosenProductId={setChosenProductId}
+        setPage={setPage}
       />
     );
   } else if (page === "ProductPage") {
-    pageBodyVisible = <ProductPage />;
+    pageBodyVisible = (
+      <ProductPage
+        setPage={setPage}
+        setUserShoppingCart={setUserShoppingCart}
+        userShoppingCart={userShoppingCart}
+      />
+    );
   }
 
   return (
@@ -177,6 +233,7 @@ function App() {
         shoppingCartModalOpen={shoppingCartModalOpen}
         userShoppingCart={userShoppingCart}
         setUserShoppingCart={setUserShoppingCart}
+        pInfo={pInfo}
       />
       <Navbar
         setPage={setPage}

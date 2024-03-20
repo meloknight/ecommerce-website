@@ -47,7 +47,14 @@ export default function Navbar(props: any) {
             >
               CATEGORIES
             </button>
-            <button className="nav-buttons">PRODUCT PAGE</button>
+            <button
+              onClick={() => {
+                props.setPage("ProductPage");
+              }}
+              className="nav-buttons"
+            >
+              PRODUCT PAGE
+            </button>
             <button
               className={`nav-buttons shopping-cart-icon`}
               onClick={() => {

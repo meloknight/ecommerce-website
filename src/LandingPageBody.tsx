@@ -58,6 +58,7 @@ export default function LandingPageBody(props: any) {
               productPrice={pInfo[0].productPrice}
               productImage={pInfo[0].firstProductImage}
               setChosenProductId={props.setChosenProductId}
+              setPage={props.setPage}
             />
             <ProductCard
               cardType="proud"
@@ -66,6 +67,7 @@ export default function LandingPageBody(props: any) {
               productPrice={pInfo[1].productPrice}
               productImage={pInfo[1].firstProductImage}
               setChosenProductId={props.setChosenProductId}
+              setPage={props.setPage}
             />
             <ProductCard
               cardType="proud"
@@ -74,6 +76,7 @@ export default function LandingPageBody(props: any) {
               productPrice={pInfo[2].productPrice}
               productImage={pInfo[2].firstProductImage}
               setChosenProductId={props.setChosenProductId}
+              setPage={props.setPage}
             />
             <ProductCard
               cardType="proud"
@@ -82,6 +85,7 @@ export default function LandingPageBody(props: any) {
               productPrice={pInfo[3].productPrice}
               productImage={pInfo[3].firstProductImage}
               setChosenProductId={props.setChosenProductId}
+              setPage={props.setPage}
             />
             <ProductCard
               cardType="proud"
@@ -90,6 +94,7 @@ export default function LandingPageBody(props: any) {
               productPrice={pInfo[4].productPrice}
               productImage={pInfo[4].firstProductImage}
               setChosenProductId={props.setChosenProductId}
+              setPage={props.setPage}
             />
             <ProductCard
               cardType="proud"
@@ -98,6 +103,7 @@ export default function LandingPageBody(props: any) {
               productPrice={pInfo[5].productPrice}
               productImage={pInfo[5].firstProductImage}
               setChosenProductId={props.setChosenProductId}
+              setPage={props.setPage}
             />
             <ProductCard
               cardType="proud"
@@ -106,6 +112,7 @@ export default function LandingPageBody(props: any) {
               productPrice={pInfo[6].productPrice}
               productImage={pInfo[6].firstProductImage}
               setChosenProductId={props.setChosenProductId}
+              setPage={props.setPage}
             />
             <ProductCard
               cardType="proud"
@@ -114,6 +121,7 @@ export default function LandingPageBody(props: any) {
               productPrice={pInfo[9].productPrice}
               productImage={pInfo[9].firstProductImage}
               setChosenProductId={props.setChosenProductId}
+              setPage={props.setPage}
             />
           </div>
         </div>
@@ -144,7 +152,10 @@ export default function LandingPageBody(props: any) {
 
       {/* TRENDING SECTION */}
 
-      <TrendingSection setChosenProductId={props.setChosenProductId} />
+      <TrendingSection
+        setChosenProductId={props.setChosenProductId}
+        setPage={props.setPage}
+      />
 
       {/* BANNER 2 SECTION */}
 
