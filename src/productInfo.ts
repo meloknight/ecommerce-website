@@ -234,7 +234,7 @@ export const productInfo: productInfoItemInterface[] = [
   {
     productId: 13,
     productType: "Furniture",
-    productName: "Pulp Unit 5 compartment",
+    productName: "5 compartment Shelf",
     productDescription:
       "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repudiandae sed porro incidunt at voluptatibus fugiat nisi natus quia nam? Quis incidunt est facere laboriosam?",
     productPrice: 155,

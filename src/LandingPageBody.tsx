@@ -1,43 +1,51 @@
-import { useState } from "react";
 import ProductCard from "./ProductCard";
 import { productInfo as pInfo } from "./productInfo";
 import TrendingSection from "./TrendingSection";
-
-// import {
-//   MdOutlineKeyboardArrowLeft,
-//   MdOutlineKeyboardArrowRight,
-// } from "react-icons/md";
+import { scrollToTopFast } from "./reusableFunctions";
 
 export default function LandingPageBody(props: any) {
-  // const singleTrendingCardOffset: number = 240;
-  // const [trendingOffset, setTrendingOffset] = useState(0);
-
-  // function offsetTrendingLeft() {
-  //   if (trendingOffset < 0) {
-  //     setTrendingOffset(trendingOffset + 240);
-  //   }
-  // }
-
-  // function offsetTrendingRight() {
-  //   if (trendingOffset > -4 * singleTrendingCardOffset) {
-  //     setTrendingOffset(trendingOffset - 240);
-  //   }
-  // }
-
   return (
     <main>
       <section className="home">
         <div className="home-item-container">
-          <div className="home-live-comfortably">
+          <div
+            onClick={() => {
+              props.setCategorySelected("Furniture");
+              props.setPage("CategoriesPage");
+              scrollToTopFast();
+            }}
+            className="home-live-comfortably"
+          >
             <h2>Live Comfortably</h2>
           </div>
-          <div className="home-skincare">
+          <div
+            onClick={() => {
+              props.setCategorySelected("Skin Care");
+              props.setPage("CategoriesPage");
+              scrollToTopFast();
+            }}
+            className="home-skincare"
+          >
             <h2>Skin Care</h2>
           </div>
-          <div className="home-kitchen">
+          <div
+            onClick={() => {
+              props.setCategorySelected("Kitchen");
+              props.setPage("CategoriesPage");
+              scrollToTopFast();
+            }}
+            className="home-kitchen"
+          >
             <h2>Kitchen</h2>
           </div>
-          <div className="home-electronics">
+          <div
+            onClick={() => {
+              props.setCategorySelected("Electronics");
+              props.setPage("CategoriesPage");
+              scrollToTopFast();
+            }}
+            className="home-electronics"
+          >
             <h2>Electronics</h2>
           </div>
         </div>

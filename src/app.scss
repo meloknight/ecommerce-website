@@ -663,6 +663,10 @@ footer {
               border-bottom: 1px solid black;
             }
           }
+          .product-page-total-price {
+            // background-color: red;
+            width: 120px;
+          }
         }
         .product-page-top-right-subsections {
           // border: 1px solid slateblue;
@@ -801,6 +805,10 @@ footer {
     .shopping-cart-card-product-amount-container {
       display: flex;
       gap: 6px;
+      div {
+        width: 30px;
+        text-align: center;
+      }
       button {
         width: 30px;
         height: 30px;

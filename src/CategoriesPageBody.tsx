@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 import ProductCard from "./ProductCard";
 import { productInfo as pInfo } from "./productInfo";
@@ -6,12 +6,12 @@ import { productInfo as pInfo } from "./productInfo";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 
 export default function CategoriesPageBody(props: any) {
-  const [categorySelected, setCategorySelected] = useState("All");
+  // const [categorySelected, setCategorySelected] = useState("All");
   let filteredProductInfo;
 
-  if (categorySelected != "All") {
+  if (props.categorySelected != "All") {
     filteredProductInfo = pInfo.filter(
-      (item) => item.productType === categorySelected
+      (item) => item.productType === props.categorySelected
     );
   } else {
     filteredProductInfo = pInfo;
@@ -23,7 +23,7 @@ export default function CategoriesPageBody(props: any) {
         <div className="categories-top-container">
           <button
             onClick={() => {
-              props.setPage("landingPage");
+              props.setPage("LandingPage");
             }}
           >
             <div>
@@ -35,19 +35,23 @@ export default function CategoriesPageBody(props: any) {
           <div></div>
         </div>
         <div className="categories-sorting-button-container">
-          <button onClick={() => setCategorySelected("All")}>All</button>
-          <button onClick={() => setCategorySelected("Furniture")}>
+          <button onClick={() => props.setCategorySelected("All")}>All</button>
+          <button onClick={() => props.setCategorySelected("Furniture")}>
             Furniture
           </button>
-          <button onClick={() => setCategorySelected("Electronics")}>
+          <button onClick={() => props.setCategorySelected("Electronics")}>
             Electronics
           </button>
-          <button onClick={() => setCategorySelected("Lamps")}>Lamps</button>
-          <button onClick={() => setCategorySelected("Kitchen")}>
+          <button onClick={() => props.setCategorySelected("Lamps")}>
+            Lamps
+          </button>
+          <button onClick={() => props.setCategorySelected("Kitchen")}>
             Kitchen
           </button>
-          <button onClick={() => setCategorySelected("Chairs")}>Chairs</button>
-          <button onClick={() => setCategorySelected("Skin Care")}>
+          <button onClick={() => props.setCategorySelected("Chairs")}>
+            Chairs
+          </button>
+          <button onClick={() => props.setCategorySelected("Skin Care")}>
             Skin Care
           </button>
         </div>

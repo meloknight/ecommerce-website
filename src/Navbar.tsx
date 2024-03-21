@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
-
 import { FaShoppingCart } from "react-icons/fa";
+import { scrollToTopFast } from "./reusableFunctions";
 
 export default function Navbar(props: any) {
   const [isScrolled, setIsScrolled] = useState(false);
-  // const [itemsInShoppingCart, setItemsInShoppingCart] = useState(9);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,7 +30,8 @@ export default function Navbar(props: any) {
           <div className="nav-left">
             <button
               onClick={() => {
-                props.setPage("landingPage");
+                props.setPage("LandingPage");
+                scrollToTopFast();
               }}
               className="nav-button-left"
             >
@@ -42,6 +42,7 @@ export default function Navbar(props: any) {
             <button
               onClick={() => {
                 props.setPage("CategoriesPage");
+                scrollToTopFast();
               }}
               className="nav-buttons"
             >
@@ -50,6 +51,7 @@ export default function Navbar(props: any) {
             <button
               onClick={() => {
                 props.setPage("ProductPage");
+                scrollToTopFast();
               }}
               className="nav-buttons"
             >
