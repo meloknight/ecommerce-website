@@ -10,17 +10,22 @@ export default function ProductPage(props: any) {
   );
 
   const [currentImageHovered, setCurrentImageHovered] = useState(1);
-  const [
-    currentQuantityOfProductSelected,
-    setCurrentQuantityOfProductSelected,
-  ] = useState(1);
+
+  // const [
+  //   currentQuantityOfProductSelected,
+  //   setCurrentQuantityOfProductSelected,
+  // ] = useState(1);
 
   const incrementQuantity = () => {
-    setCurrentQuantityOfProductSelected(currentQuantityOfProductSelected + 1);
+    props.setCurrentQuantityOfProductSelected(
+      props.currentQuantityOfProductSelected + 1
+    );
   };
   const decrementQuantity = () => {
-    if (currentQuantityOfProductSelected > 1) {
-      setCurrentQuantityOfProductSelected(currentQuantityOfProductSelected - 1);
+    if (props.currentQuantityOfProductSelected > 1) {
+      props.setCurrentQuantityOfProductSelected(
+        props.currentQuantityOfProductSelected - 1
+      );
     }
   };
 
@@ -28,7 +33,7 @@ export default function ProductPage(props: any) {
     let isItemInList: boolean = false;
     const newItem = {
       selectedProductId: currentSelectedProductInfo?.productId,
-      quantitySelected: currentQuantityOfProductSelected,
+      quantitySelected: props.currentQuantityOfProductSelected,
     };
 
     const updatedItems = props.userShoppingCart.map((item: any) => {
@@ -114,14 +119,14 @@ export default function ProductPage(props: any) {
                 <div>Quantity</div>
                 <div className="product-page-quantity-selector">
                   <button onClick={decrementQuantity}>-</button>
-                  <div>{currentQuantityOfProductSelected}</div>
+                  <div>{props.currentQuantityOfProductSelected}</div>
                   <button onClick={incrementQuantity}>+</button>
                 </div>
                 <div className="product-page-total-price">
                   $
                   {currentSelectedProductInfo?.productPrice
                     ? currentSelectedProductInfo.productPrice *
-                      currentQuantityOfProductSelected
+                      props.currentQuantityOfProductSelected
                     : 0}
                 </div>
               </div>

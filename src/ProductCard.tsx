@@ -8,6 +8,7 @@ export default function ProductCard(props: any) {
         onClick={() => {
           props.setChosenProductId(props.productId);
           props.setPage("ProductPage");
+
           scrollToTopFast();
         }}
         className={`${props.cardType}-product-card`}

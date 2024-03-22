@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import LandingPageBody from "./LandingPageBody";
 import NewsletterSection from "./NewsletterSection";
@@ -25,6 +25,14 @@ function App() {
   const [chosenProductId, setChosenProductId] = useState(4);
   const [categorySelected, setCategorySelected] = useState("All");
 
+  const [
+    currentQuantityOfProductSelected,
+    setCurrentQuantityOfProductSelected,
+  ] = useState(1);
+  useEffect(() => {
+    setCurrentQuantityOfProductSelected(1);
+  }, [chosenProductId]);
+
   let pageBodyVisible;
   if (page === "LandingPage") {
     pageBodyVisible = (
@@ -47,6 +55,10 @@ function App() {
   } else if (page === "ProductPage") {
     pageBodyVisible = (
       <ProductPage
+        currentQuantityOfProductSelected={currentQuantityOfProductSelected}
+        setCurrentQuantityOfProductSelected={
+          setCurrentQuantityOfProductSelected
+        }
         chosenProductId={chosenProductId}
         setChosenProductId={setChosenProductId}
         setPage={setPage}
