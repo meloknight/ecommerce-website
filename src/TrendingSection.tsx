@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import ProductCard from "./ProductCard";
 import { productInfo as pInfo } from "./productInfo";
@@ -11,6 +11,20 @@ import {
 export default function TrendingSection(props: any) {
   const singleTrendingCardOffset: number = 240;
   const [trendingOffset, setTrendingOffset] = useState(0);
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const updateViewportWidth = () => {
+      setViewportWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", updateViewportWidth);
+    return () => {
+      window.removeEventListener("resize", updateViewportWidth);
+    };
+  }, []);
+
+  console.log(`trending offset: ${trendingOffset}`);
+  console.log(`viewport width: ${viewportWidth}`);
 
   function offsetTrendingLeft() {
     if (trendingOffset < 0) {
@@ -19,9 +33,31 @@ export default function TrendingSection(props: any) {
   }
 
   function offsetTrendingRight() {
-    if (trendingOffset > -4 * singleTrendingCardOffset) {
+    if (trendingOffset > -viewportWidth) {
       setTrendingOffset(trendingOffset - 240);
     }
+
+    // if (1200 < viewportWidth) {
+    //   if (trendingOffset > -4 * singleTrendingCardOffset) {
+    //     setTrendingOffset(trendingOffset - 240);
+    //   }
+    // } else if (1000 < viewportWidth && viewportWidth <= 1200) {
+    //   if (trendingOffset > -5 * singleTrendingCardOffset) {
+    //     setTrendingOffset(trendingOffset - 240);
+    //   }
+    // } else if (750 < viewportWidth && viewportWidth <= 1000) {
+    //   if (trendingOffset > -6 * singleTrendingCardOffset) {
+    //     setTrendingOffset(trendingOffset - 240);
+    //   }
+    // } else if (500 < viewportWidth && viewportWidth <= 750) {
+    //   if (trendingOffset > -7 * singleTrendingCardOffset) {
+    //     setTrendingOffset(trendingOffset - 240);
+    //   }
+    // } else if (0 < viewportWidth && viewportWidth <= 500) {
+    //   if (trendingOffset > -8 * singleTrendingCardOffset) {
+    //     setTrendingOffset(trendingOffset - 240);
+    //   }
+    // }
   }
 
   return (
@@ -48,6 +84,7 @@ export default function TrendingSection(props: any) {
         </div>
         <div
           className="trending-bottom-container"
+          id="slider"
           style={{
             transform: `translateX(${trendingOffset}px)`,
           }}
