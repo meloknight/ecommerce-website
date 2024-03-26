@@ -31,8 +31,8 @@ export default function CategoriesPageBody(props: any) {
             </div>
             <span>Home</span>
           </button>
-          <h1>ALL</h1>
-          <div></div>
+          <h1>{props.categorySelected}</h1>
+          <div className="categories-filler"></div>
         </div>
         <div className="categories-sorting-button-container">
           <button onClick={() => props.setCategorySelected("All")}>All</button>
