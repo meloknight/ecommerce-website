@@ -18,7 +18,7 @@ export const productInfo: productInfoItemInterface[] = [
     productType: "Lamps",
     productName: "Black and White Lamp",
     productDescription:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repudiandae sed porro incidunt at voluptatibus fugiat nisi natus quia nam? Quis incidunt est facere laboriosam?",
+      "Our striking black and white metal lamp is a fusion of modern elegance and timeless charm. With its monochromatic design and smooth metal construction, this lamp effortlessly enhances any decor scheme while illuminating your space with a touch of sophistication.",
     productPrice: 120,
     productTexture: "Smooth metal",
     productWeightInLbs: 4,
@@ -35,7 +35,7 @@ export const productInfo: productInfoItemInterface[] = [
     productType: "Skin Care",
     productName: "Body Oil 50mL",
     productDescription:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repudiandae sed porro incidunt at voluptatibus fugiat nisi natus quia nam? Quis incidunt est facere laboriosam?",
+      "Indulge in the luxurious hydration of our 50mL Body Oil, crafted to nourish your skin with a delicate blend of natural oils. Its lightweight formula absorbs quickly, leaving your skin feeling silky smooth and radiant, making every application a pampering experience.",
     productPrice: 18,
     productTexture: "Oil",
     productWeightInLbs: 0.4,
@@ -52,7 +52,7 @@ export const productInfo: productInfoItemInterface[] = [
     productType: "Skin Care",
     productName: "Body Oil 200mL",
     productDescription:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repudiandae sed porro incidunt at voluptatibus fugiat nisi natus quia nam? Quis incidunt est facere laboriosam?",
+      "Experience the indulgent hydration of our larger 200mL Body Oil, meticulously crafted to lavish your skin with a luxurious blend of natural oils. Its lightweight formula absorbs swiftly, enveloping your skin in silky smoothness and radiance with every generous application, ensuring a truly pampering experience.",
     productPrice: 60,
     productTexture: "Oil",
     productWeightInLbs: 1.6,
@@ -69,7 +69,7 @@ export const productInfo: productInfoItemInterface[] = [
     productType: "Chairs",
     productName: "Comfy Chair",
     productDescription:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repudiandae sed porro incidunt at voluptatibus fugiat nisi natus quia nam? Quis incidunt est facere laboriosam?",
+      "This sumptuously comfortable dark grey fabric chair is the epitome of relaxation and style. Its sleek design and plush upholstery invite you to sink in and unwind, making it the perfect addition to any modern living space.",
     productPrice: 320,
     productTexture: "Textile",
     productWeightInLbs: 50,
@@ -83,7 +83,7 @@ export const productInfo: productInfoItemInterface[] = [
     productType: "Chairs",
     productName: "Copenhagen Armchair",
     productDescription:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repudiandae sed porro incidunt at voluptatibus fugiat nisi natus quia nam? Quis incidunt est facere laboriosam?",
+      "Elevate your space with our Copenhagen Armchair, meticulously crafted with supple leather upholstery and sturdy wooden construction for both style and durability. Its timeless design and ergonomic build ensure a blend of sophistication and comfort, making it the ideal centerpiece for any contemporary setting.",
     productPrice: 540,
     productTexture: "Leather",
     productWeightInLbs: 70,
@@ -100,7 +100,7 @@ export const productInfo: productInfoItemInterface[] = [
     productType: "Furniture",
     productName: "Cube Lolo Vase Black",
     productDescription:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repudiandae sed porro incidunt at voluptatibus fugiat nisi natus quia nam? Quis incidunt est facere laboriosam?",
+      "Our sleek black Cube Lolo Vase combines a modern plastic body with a chic metal frame for a striking yet elegant aesthetic. Its minimalist design effortlessly complements any decor style, adding a touch of sophistication to your floral arrangements or standalone display.",
     productPrice: 40,
     productTexture: "Smooth plastic",
     productWeightInLbs: 4,
@@ -115,9 +115,9 @@ export const productInfo: productInfoItemInterface[] = [
   {
     productId: 6,
     productType: "Furniture",
-    productName: "Gejst Shelf A Black Ash/Black",
+    productName: "Gejst Shelf A Black Ash",
     productDescription:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repudiandae sed porro incidunt at voluptatibus fugiat nisi natus quia nam? Quis incidunt est facere laboriosam?",
+      "This black Gejst Shelf A is meticulously crafted from durable wood and adorned with a sleek black ash paint coat for a timeless finish. Its minimalist design offers ample storage space and also adds a touch of contemporary elegance to any room",
     productPrice: 105,
     productTexture: "Wood",
     productWeightInLbs: 10,
@@ -134,7 +134,7 @@ export const productInfo: productInfoItemInterface[] = [
     productType: "Lamps",
     productName: "Golden Modern Light",
     productDescription:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repudiandae sed porro incidunt at voluptatibus fugiat nisi natus quia nam? Quis incidunt est facere laboriosam?",
+      "Illuminate your space with our exquisite Golden Modern Light, meticulously crafted from shimmering golden resin and sleek metal for a luxurious aesthetic. Its contemporary design and warm glow bring both elegance and ambiance to any room, making it a statement piece that effortlessly enhances your decor.",
     productPrice: 210,
     productTexture: "Plastic",
     productWeightInLbs: 6,
@@ -151,7 +151,7 @@ export const productInfo: productInfoItemInterface[] = [
     productType: "Lamps",
     productName: "Lamp Light Blue",
     productDescription:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repudiandae sed porro incidunt at voluptatibus fugiat nisi natus quia nam? Quis incidunt est facere laboriosam?",
+      "Introducing our charming blue Lamp Light, crafted from light blue plastic to evoke a sense of tranquility and style. Its soothing hue and modern design make it the perfect addition to any space, casting a gentle glow that enhances both ambiance and decor with ease.",
     productPrice: 98,
     productTexture: "Plastic",
     productWeightInLbs: 8,
@@ -168,9 +168,9 @@ export const productInfo: productInfoItemInterface[] = [
     productType: "Chairs",
     productName: "Little Woolen Armchair ",
     productDescription:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repudiandae sed porro incidunt at voluptatibus fugiat nisi natus quia nam? Quis incidunt est facere laboriosam?",
+      "Our Little Woolen Armchair has been crafted with plush synthetic wool upholstery atop a sturdy wooden frame for both comfort and durability. Its charming design and cozy feel make it the perfect spot for relaxation and adding a touch of warmth to any corner of your home.",
     productPrice: 520,
-    productTexture: "Wool",
+    productTexture: "Synthetic Wool",
     productWeightInLbs: 50,
     productSize: "60cm x 60cm",
     firstProductImage:
@@ -185,7 +185,7 @@ export const productInfo: productInfoItemInterface[] = [
     productType: "Lamps",
     productName: "Mat Black Lamp",
     productDescription:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repudiandae sed porro incidunt at voluptatibus fugiat nisi natus quia nam? Quis incidunt est facere laboriosam?",
+      "This sleek black lamp is a contemporary addition to any space. Its minimalist design exudes sophistication while providing soft, ambient illumination, perfect for creating a cozy atmosphere in your home or office.",
     productPrice: 115,
     productTexture: "Plastic",
     productWeightInLbs: 8,

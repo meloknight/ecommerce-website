@@ -3,8 +3,6 @@ import TrendingSection from "./TrendingSection";
 import { productInfoItemInterface, productInfo as pInfo } from "./productInfo";
 
 export default function ProductPage(props: any) {
-  console.log(props);
-
   const currentSelectedProductInfo = pInfo.find(
     (obj: productInfoItemInterface) => obj.productId === props.chosenProductId
   );

@@ -146,12 +146,20 @@ export default function LandingPageBody(props: any) {
                 MIN products are all amde to standard sizes so that you can mix
                 and match them freely.
               </p>
-              <button>SHOP NOW</button>
+              <button
+                onClick={() => {
+                  props.setCategorySelected("All");
+                  props.setPage("CategoriesPage");
+                  scrollToTopFast();
+                }}
+              >
+                SHOP NOW
+              </button>
             </div>
           </div>
           <div className="banner-image-container">
             <img
-              src="https://minimalist-e-commerce.vercel.app/static/media/banner2.03a2ebf8d998e53d1019.jpg"
+              src="/assets/home-images/banner1.jpg"
               alt="bookshelf filler image"
             />
           </div>
@@ -171,7 +179,7 @@ export default function LandingPageBody(props: any) {
         <div className="banner-container">
           <div className="banner-image-container">
             <img
-              src="https://minimalist-e-commerce.vercel.app/static/media/banner1.021adea5caa612e7dea0.jpg"
+              src="/assets/home-images/banner2.jpg"
               alt="bookshelf filler image"
             />
           </div>
@@ -182,7 +190,15 @@ export default function LandingPageBody(props: any) {
                 MIN products are all made to standard sizes so that you can mix
                 and match them freely.
               </p>
-              <button>SHOP NOW</button>
+              <button
+                onClick={() => {
+                  props.setCategorySelected("All");
+                  props.setPage("CategoriesPage");
+                  scrollToTopFast();
+                }}
+              >
+                SHOP NOW
+              </button>
             </div>
           </div>
         </div>

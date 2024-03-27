@@ -1,8 +1,6 @@
-import { useState, useEffect } from "react";
-
+import { useState, useEffect, useRef } from "react";
 import ProductCard from "./ProductCard";
 import { productInfo as pInfo } from "./productInfo";
-
 import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
@@ -11,58 +9,55 @@ import {
 export default function TrendingSection(props: any) {
   const singleTrendingCardOffset: number = 240;
   const [trendingOffset, setTrendingOffset] = useState(0);
-  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  const [trendingContainerWidth, setTrendingContainerWidth] = useState(0);
+  const trendingContainerRef = useRef(null);
 
   useEffect(() => {
-    const updateViewportWidth = () => {
-      setViewportWidth(window.innerWidth);
+    const updateWidth = () => {
+      if (trendingContainerRef.current) {
+        const trendWidth =
+          trendingContainerRef.current.getBoundingClientRect().width;
+        setTrendingContainerWidth(trendWidth);
+        setTrendingOffset(0);
+      }
     };
-    window.addEventListener("resize", updateViewportWidth);
+    updateWidth();
+    window.addEventListener("resize", updateWidth);
     return () => {
-      window.removeEventListener("resize", updateViewportWidth);
+      window.removeEventListener("resize", updateWidth);
     };
   }, []);
 
-  console.log(`trending offset: ${trendingOffset}`);
-  console.log(`viewport width: ${viewportWidth}`);
+  let cardsOnScreen: number = Math.floor(
+    trendingContainerWidth / singleTrendingCardOffset
+  );
+  let cardsOffScreen: number = 9 - cardsOnScreen;
 
   function offsetTrendingLeft() {
     if (trendingOffset < 0) {
-      setTrendingOffset(trendingOffset + 240);
+      if (trendingOffset + singleTrendingCardOffset > 0) {
+        setTrendingOffset(0);
+      } else {
+        setTrendingOffset(trendingOffset + singleTrendingCardOffset);
+      }
     }
   }
-
   function offsetTrendingRight() {
-    if (trendingOffset > -viewportWidth) {
-      setTrendingOffset(trendingOffset - 240);
+    if (trendingOffset > -(cardsOffScreen * singleTrendingCardOffset)) {
+      if (
+        trendingOffset - singleTrendingCardOffset <=
+        -(2150 - trendingContainerWidth)
+      ) {
+        setTrendingOffset(-(2150 - trendingContainerWidth));
+      } else {
+        setTrendingOffset(trendingOffset - singleTrendingCardOffset);
+      }
     }
-
-    // if (1200 < viewportWidth) {
-    //   if (trendingOffset > -4 * singleTrendingCardOffset) {
-    //     setTrendingOffset(trendingOffset - 240);
-    //   }
-    // } else if (1000 < viewportWidth && viewportWidth <= 1200) {
-    //   if (trendingOffset > -5 * singleTrendingCardOffset) {
-    //     setTrendingOffset(trendingOffset - 240);
-    //   }
-    // } else if (750 < viewportWidth && viewportWidth <= 1000) {
-    //   if (trendingOffset > -6 * singleTrendingCardOffset) {
-    //     setTrendingOffset(trendingOffset - 240);
-    //   }
-    // } else if (500 < viewportWidth && viewportWidth <= 750) {
-    //   if (trendingOffset > -7 * singleTrendingCardOffset) {
-    //     setTrendingOffset(trendingOffset - 240);
-    //   }
-    // } else if (0 < viewportWidth && viewportWidth <= 500) {
-    //   if (trendingOffset > -8 * singleTrendingCardOffset) {
-    //     setTrendingOffset(trendingOffset - 240);
-    //   }
-    // }
   }
 
   return (
     <section className="trending">
-      <div className="trending-container">
+      <div className="trending-container" ref={trendingContainerRef}>
         <div className="trending-top-container">
           <div className="trending-top-left-container">
             <h2>Trending Now</h2>

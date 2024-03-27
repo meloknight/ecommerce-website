@@ -6,7 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 export default function Navbar(props: any) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  const [hamburgerMenuActive, setHamburgerMenuActive] = useState(true);
+  const [hamburgerMenuActive, setHamburgerMenuActive] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
