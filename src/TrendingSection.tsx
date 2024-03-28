@@ -10,11 +10,12 @@ export default function TrendingSection(props: any) {
   const singleTrendingCardOffset: number = 240;
   const [trendingOffset, setTrendingOffset] = useState(0);
   const [trendingContainerWidth, setTrendingContainerWidth] = useState(0);
-  const trendingContainerRef = useRef(null);
+  const trendingContainerRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     const updateWidth = () => {
       if (trendingContainerRef.current) {
+        console.log(trendingContainerRef);
         const trendWidth =
           trendingContainerRef.current.getBoundingClientRect().width;
         setTrendingContainerWidth(trendWidth);
