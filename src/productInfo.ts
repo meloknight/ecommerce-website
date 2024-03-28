@@ -24,11 +24,11 @@ export const productInfo: productInfoItemInterface[] = [
     productWeightInLbs: 4,
     productSize: "10cm x 10cm",
     firstProductImage:
-      "/assets/product-images/black-and-white-lamp/black-and-white-lamp-1.jpeg",
+      "./assets/product-images/black-and-white-lamp/black-and-white-lamp-1.jpeg",
     secondProductImage:
-      "/assets/product-images/black-and-white-lamp/black-and-white-lamp-2.webp",
+      "./assets/product-images/black-and-white-lamp/black-and-white-lamp-2.webp",
     thirdProductImage:
-      "/assets/product-images/black-and-white-lamp/black-and-white-lamp-3.webp",
+      "./assets/product-images/black-and-white-lamp/black-and-white-lamp-3.webp",
   },
   {
     productId: 1,
