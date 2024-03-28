@@ -202,7 +202,7 @@ export const productInfo: productInfoItemInterface[] = [
     productType: "Chairs",
     productName: "Oak Spanish Chair",
     productDescription:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repudiandae sed porro incidunt at voluptatibus fugiat nisi natus quia nam? Quis incidunt est facere laboriosam?",
+      "Our exquisite Oak Spanish Chair is expertly crafted with sturdy oak and sumptuous leather upholstery for a timeless appeal. Its classic design and premium materials exude sophistication, making it a standout piece that effortlessly blends comfort and elegance in any space.",
     productPrice: 635,
     productTexture: "Wood",
     productWeightInLbs: 75,
@@ -219,7 +219,7 @@ export const productInfo: productInfoItemInterface[] = [
     productType: "Kitchen",
     productName: "Pop-Up Toaster",
     productDescription:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repudiandae sed porro incidunt at voluptatibus fugiat nisi natus quia nam? Quis incidunt est facere laboriosam?",
+      "Experience the convenience of our sleek white Pop-up Toaster, designed to bring a touch of modern functionality to your morning routine. With its efficient pop-up feature and stylish design, it ensures perfectly toasted bread every time, making breakfast preparation a breeze.",
     productPrice: 50,
     productTexture: "Plastic",
     productWeightInLbs: 4,
@@ -236,7 +236,7 @@ export const productInfo: productInfoItemInterface[] = [
     productType: "Furniture",
     productName: "5 compartment Shelf",
     productDescription:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repudiandae sed porro incidunt at voluptatibus fugiat nisi natus quia nam? Quis incidunt est facere laboriosam?",
+      "This versatile wooden 5 Compartment Shelf is designed to bring both organization and charm to any room. With its sturdy construction and ample storage space, it provides a simple and minimal solution for displaying and tidying up your belongings with ease.",
     productPrice: 155,
     productTexture: "Wood",
     productWeightInLbs: 30,
@@ -253,7 +253,7 @@ export const productInfo: productInfoItemInterface[] = [
     productType: "Electronics",
     productName: "Remote Sensor Light",
     productDescription:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repudiandae sed porro incidunt at voluptatibus fugiat nisi natus quia nam? Quis incidunt est facere laboriosam?",
+      "Our innovative Remote Sensor Light features a sleek metal design and advanced app compatibility for effortless customization. With its responsive sensors and versatile programming options, it offers convenient illumination tailored to your needs.",
     productPrice: 80,
     productTexture: "metal",
     productWeightInLbs: 5,
@@ -270,7 +270,7 @@ export const productInfo: productInfoItemInterface[] = [
     productType: "Lamps",
     productName: "Simple Golden Lamp",
     productDescription:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repudiandae sed porro incidunt at voluptatibus fugiat nisi natus quia nam? Quis incidunt est facere laboriosam?",
+      "Illuminate your space with elegance using our Simple Golden Lamp, boasting a timeless design and radiant golden finish. Its understated charm adds a touch of sophistication to any room, making it the perfect lighting accent for both modern and classic decor styles.",
     productPrice: 166,
     productTexture: "Plastic",
     productWeightInLbs: 8,
@@ -287,7 +287,7 @@ export const productInfo: productInfoItemInterface[] = [
     productType: "Lamps",
     productName: "Table Lamp",
     productDescription:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repudiandae sed porro incidunt at voluptatibus fugiat nisi natus quia nam? Quis incidunt est facere laboriosam?",
+      "Our versatile Simple Table Lamp is crafted with durable plastic construction and available in a variety of vibrant colors to suit any decor. Its minimalist design and adjustable brightness make it an ideal addition to any space, offering both functionality and style in one sleek package.",
     productPrice: 65,
     productTexture: "Plastic",
     productWeightInLbs: 4,
@@ -301,7 +301,7 @@ export const productInfo: productInfoItemInterface[] = [
     productType: "Lamps",
     productName: "The Sun Pendant Black",
     productDescription:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repudiandae sed porro incidunt at voluptatibus fugiat nisi natus quia nam? Quis incidunt est facere laboriosam?",
+      "Elevate your space with The Sun Pendant Black a captivating hanging light that exudes contemporary allure. Its sleek black design and radiant glow make it a stylish statement piece, illuminating any room with modern sophistication and warmth.",
     productPrice: 166,
     productTexture: "Plastic",
     productWeightInLbs: 10,
@@ -318,7 +318,7 @@ export const productInfo: productInfoItemInterface[] = [
     productType: "Chairs",
     productName: "Traditional Chair",
     productDescription:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repudiandae sed porro incidunt at voluptatibus fugiat nisi natus quia nam? Quis incidunt est facere laboriosam?",
+      "The timeless Traditional Chair, meticulously crafted with sturdy wood construction and adorned with soft textile coverings for comfort and style. Its classic design exudes warmth and elegance, making it the perfect addition to any home or office setting.",
     productPrice: 330,
     productTexture: "Wood",
     productWeightInLbs: 35,
@@ -335,7 +335,7 @@ export const productInfo: productInfoItemInterface[] = [
     productType: "Skin Care",
     productName: "Unbleached Cotton Pads 180",
     productDescription:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repudiandae sed porro incidunt at voluptatibus fugiat nisi natus quia nam? Quis incidunt est facere laboriosam?",
+      "Our Unbleached Cotton Pads 180 are designed for seamless pairing with your skincare routine. Crafted from soft unbleached cotton, these pads offer a luxurious and eco-friendly way to enhance your skincare regimen.",
     productPrice: 35,
     productTexture: "Cotton",
     productWeightInLbs: 0.5,
