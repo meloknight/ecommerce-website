@@ -159,7 +159,7 @@ export default function LandingPageBody(props: any) {
           </div>
           <div className="banner-image-container">
             <img
-              src="/assets/home-images/banner1.jpg"
+              src="./assets/home-images/banner1.jpg"
               alt="bookshelf filler image"
             />
           </div>
@@ -179,7 +179,7 @@ export default function LandingPageBody(props: any) {
         <div className="banner-container">
           <div className="banner-image-container">
             <img
-              src="/assets/home-images/banner2.jpg"
+              src="./assets/home-images/banner2.jpg"
               alt="bookshelf filler image"
             />
           </div>
