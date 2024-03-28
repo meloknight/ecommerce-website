@@ -41,11 +41,11 @@ export const productInfo: productInfoItemInterface[] = [
     productWeightInLbs: 0.4,
     productSize: "5cm x 5cm",
     firstProductImage:
-      "/assets/product-images/body-oil-50ml/body-oil-50ml-1.jpg",
+      "./assets/product-images/body-oil-50ml/body-oil-50ml-1.jpg",
     secondProductImage:
-      "/assets/product-images/body-oil-50ml/body-oil-50ml-2.jpg",
+      "./assets/product-images/body-oil-50ml/body-oil-50ml-2.jpg",
     thirdProductImage:
-      "/assets/product-images/body-oil-50ml/body-oil-50ml-3.jpg",
+      "./assets/product-images/body-oil-50ml/body-oil-50ml-3.jpg",
   },
   {
     productId: 2,
@@ -58,11 +58,11 @@ export const productInfo: productInfoItemInterface[] = [
     productWeightInLbs: 1.6,
     productSize: "10cm x 10cm",
     firstProductImage:
-      "/assets/product-images/body-oil-200ml/body-oil-200ml-1.jpg",
+      "./assets/product-images/body-oil-200ml/body-oil-200ml-1.jpg",
     secondProductImage:
-      "/assets/product-images/body-oil-200ml/body-oil-200ml-2.jpg",
+      "./assets/product-images/body-oil-200ml/body-oil-200ml-2.jpg",
     thirdProductImage:
-      "/assets/product-images/body-oil-200ml/body-oil-200ml-3.jpg",
+      "./assets/product-images/body-oil-200ml/body-oil-200ml-3.jpg",
   },
   {
     productId: 3,
@@ -74,9 +74,10 @@ export const productInfo: productInfoItemInterface[] = [
     productTexture: "Textile",
     productWeightInLbs: 50,
     productSize: "60cm x 60cm",
-    firstProductImage: "/assets/product-images/comfy-chair/comfy-chair-1.jpg",
-    secondProductImage: "/assets/product-images/comfy-chair/comfy-chair-2.webp",
-    thirdProductImage: "/assets/product-images/comfy-chair/comfy-chair-3.webp",
+    firstProductImage: "./assets/product-images/comfy-chair/comfy-chair-1.jpg",
+    secondProductImage:
+      "./assets/product-images/comfy-chair/comfy-chair-2.webp",
+    thirdProductImage: "./assets/product-images/comfy-chair/comfy-chair-3.webp",
   },
   {
     productId: 4,
@@ -89,11 +90,11 @@ export const productInfo: productInfoItemInterface[] = [
     productWeightInLbs: 70,
     productSize: "60cm x 60cm",
     firstProductImage:
-      "/assets/product-images/copenhagen-armchair/copenhagen-armchair-1.jpg",
+      "./assets/product-images/copenhagen-armchair/copenhagen-armchair-1.jpg",
     secondProductImage:
-      "/assets/product-images/copenhagen-armchair/copenhagen-armchair-2.webp",
+      "./assets/product-images/copenhagen-armchair/copenhagen-armchair-2.webp",
     thirdProductImage:
-      "/assets/product-images/copenhagen-armchair/copenhagen-armchair-3.webp",
+      "./assets/product-images/copenhagen-armchair/copenhagen-armchair-3.webp",
   },
   {
     productId: 5,
@@ -106,11 +107,11 @@ export const productInfo: productInfoItemInterface[] = [
     productWeightInLbs: 4,
     productSize: "15cm x 15cm",
     firstProductImage:
-      "/assets/product-images/cube-lolo-vase-black/cube-lolo-vase-black-1.png",
+      "./assets/product-images/cube-lolo-vase-black/cube-lolo-vase-black-1.png",
     secondProductImage:
-      "/assets/product-images/cube-lolo-vase-black/cube-lolo-vase-black-2.webp",
+      "./assets/product-images/cube-lolo-vase-black/cube-lolo-vase-black-2.webp",
     thirdProductImage:
-      "/assets/product-images/cube-lolo-vase-black/cube-lolo-vase-black-3.webp",
+      "./assets/product-images/cube-lolo-vase-black/cube-lolo-vase-black-3.webp",
   },
   {
     productId: 6,
@@ -123,11 +124,11 @@ export const productInfo: productInfoItemInterface[] = [
     productWeightInLbs: 10,
     productSize: "60cm x 20cm",
     firstProductImage:
-      "/assets/product-images/gejst-shelf-a-black-ash-black/gejst-shelf-a-black-ash-black-1.jpg",
+      "./assets/product-images/gejst-shelf-a-black-ash-black/gejst-shelf-a-black-ash-black-1.jpg",
     secondProductImage:
-      "/assets/product-images/gejst-shelf-a-black-ash-black/gejst-shelf-a-black-ash-black-2",
+      "./assets/product-images/gejst-shelf-a-black-ash-black/gejst-shelf-a-black-ash-black-2",
     thirdProductImage:
-      "/assets/product-images/gejst-shelf-a-black-ash-black/gejst-shelf-a-black-ash-black-3.webp",
+      "./assets/product-images/gejst-shelf-a-black-ash-black/gejst-shelf-a-black-ash-black-3.webp",
   },
   {
     productId: 7,
@@ -140,11 +141,11 @@ export const productInfo: productInfoItemInterface[] = [
     productWeightInLbs: 6,
     productSize: "20cm x 20cm",
     firstProductImage:
-      "/assets/product-images/golden-modern-light/golden-modern-light-1.jpg",
+      "./assets/product-images/golden-modern-light/golden-modern-light-1.jpg",
     secondProductImage:
-      "/assets/product-images/golden-modern-light/golden-modern-light-2.webp",
+      "./assets/product-images/golden-modern-light/golden-modern-light-2.webp",
     thirdProductImage:
-      "/assets/product-images/golden-modern-light/golden-modern-light-3.webp",
+      "./assets/product-images/golden-modern-light/golden-modern-light-3.webp",
   },
   {
     productId: 8,
@@ -157,11 +158,11 @@ export const productInfo: productInfoItemInterface[] = [
     productWeightInLbs: 8,
     productSize: "14cm x 14cm",
     firstProductImage:
-      "/assets/product-images/lamp-light-blue/lamp-light-blue-1.png",
+      "./assets/product-images/lamp-light-blue/lamp-light-blue-1.png",
     secondProductImage:
-      "/assets/product-images/lamp-light-blue/lamp-light-blue-2.webp",
+      "./assets/product-images/lamp-light-blue/lamp-light-blue-2.webp",
     thirdProductImage:
-      "/assets/product-images/lamp-light-blue/lamp-light-blue-3.webp",
+      "./assets/product-images/lamp-light-blue/lamp-light-blue-3.webp",
   },
   {
     productId: 9,
@@ -174,11 +175,11 @@ export const productInfo: productInfoItemInterface[] = [
     productWeightInLbs: 50,
     productSize: "60cm x 60cm",
     firstProductImage:
-      "/assets/product-images/little-armchair-sheepskin/little-armchair-sheepskin-1.jpg",
+      "./assets/product-images/little-armchair-sheepskin/little-armchair-sheepskin-1.jpg",
     secondProductImage:
-      "/assets/product-images/little-armchair-sheepskin/little-armchair-sheepskin-2.jpg",
+      "./assets/product-images/little-armchair-sheepskin/little-armchair-sheepskin-2.jpg",
     thirdProductImage:
-      "/assets/product-images/little-armchair-sheepskin/little-armchair-sheepskin-3.jpg",
+      "./assets/product-images/little-armchair-sheepskin/little-armchair-sheepskin-3.jpg",
   },
   {
     productId: 10,
@@ -191,11 +192,11 @@ export const productInfo: productInfoItemInterface[] = [
     productWeightInLbs: 8,
     productSize: "12cm x 12cm",
     firstProductImage:
-      "/assets/product-images/mat-black-lamp/mat-black-lamp-1.png",
+      "./assets/product-images/mat-black-lamp/mat-black-lamp-1.png",
     secondProductImage:
-      "/assets/product-images/mat-black-lamp/mat-black-lamp-2.webp",
+      "./assets/product-images/mat-black-lamp/mat-black-lamp-2.webp",
     thirdProductImage:
-      "/assets/product-images/mat-black-lamp/mat-black-lamp-3.webp",
+      "./assets/product-images/mat-black-lamp/mat-black-lamp-3.webp",
   },
   {
     productId: 11,
@@ -208,11 +209,11 @@ export const productInfo: productInfoItemInterface[] = [
     productWeightInLbs: 75,
     productSize: "60cm x 60cm",
     firstProductImage:
-      "/assets/product-images/oak-spanish-chair/oak-spanish-chair-1.png",
+      "./assets/product-images/oak-spanish-chair/oak-spanish-chair-1.png",
     secondProductImage:
-      "/assets/product-images/oak-spanish-chair/oak-spanish-chair-2.webp",
+      "./assets/product-images/oak-spanish-chair/oak-spanish-chair-2.webp",
     thirdProductImage:
-      "/assets/product-images/oak-spanish-chair/oak-spanish-chair-3.webp",
+      "./assets/product-images/oak-spanish-chair/oak-spanish-chair-3.webp",
   },
   {
     productId: 12,
@@ -225,11 +226,11 @@ export const productInfo: productInfoItemInterface[] = [
     productWeightInLbs: 4,
     productSize: "20cm x 10cm",
     firstProductImage:
-      "/assets/product-images/pop-up-toaster/pop-up-toaster-1.jpg",
+      "./assets/product-images/pop-up-toaster/pop-up-toaster-1.jpg",
     secondProductImage:
-      "/assets/product-images/pop-up-toaster/pop-up-toaster-2.jpg",
+      "./assets/product-images/pop-up-toaster/pop-up-toaster-2.jpg",
     thirdProductImage:
-      "/assets/product-images/pop-up-toaster/pop-up-toaster-3.jpg",
+      "./assets/product-images/pop-up-toaster/pop-up-toaster-3.jpg",
   },
   {
     productId: 13,
@@ -242,11 +243,11 @@ export const productInfo: productInfoItemInterface[] = [
     productWeightInLbs: 30,
     productSize: "60cm x 60cm",
     firstProductImage:
-      "/assets/product-images/pulp-unit-5-compartment/pulp-unit-5-compartment-1.jpeg",
+      "./assets/product-images/pulp-unit-5-compartment/pulp-unit-5-compartment-1.jpeg",
     secondProductImage:
-      "/assets/product-images/pulp-unit-5-compartment/pulp-unit-5-compartment-2.jpg",
+      "./assets/product-images/pulp-unit-5-compartment/pulp-unit-5-compartment-2.jpg",
     thirdProductImage:
-      "/assets/product-images/pulp-unit-5-compartment/pulp-unit-5-compartment-3.jpg",
+      "./assets/product-images/pulp-unit-5-compartment/pulp-unit-5-compartment-3.jpg",
   },
   {
     productId: 14,
@@ -259,11 +260,11 @@ export const productInfo: productInfoItemInterface[] = [
     productWeightInLbs: 5,
     productSize: "12cm x 12cm",
     firstProductImage:
-      "/assets/product-images/remote-sensor-light/remote-sensor-light-1.jpg",
+      "./assets/product-images/remote-sensor-light/remote-sensor-light-1.jpg",
     secondProductImage:
-      "/assets/product-images/remote-sensor-light/remote-sensor-light-2.webp",
+      "./assets/product-images/remote-sensor-light/remote-sensor-light-2.webp",
     thirdProductImage:
-      "/assets/product-images/remote-sensor-light/remote-sensor-light-3.jpg",
+      "./assets/product-images/remote-sensor-light/remote-sensor-light-3.jpg",
   },
   {
     productId: 15,
@@ -276,11 +277,11 @@ export const productInfo: productInfoItemInterface[] = [
     productWeightInLbs: 8,
     productSize: "20cm x 20cm",
     firstProductImage:
-      "/assets/product-images/simple-golden-lamp/simple-golden-lamp-1.png",
+      "./assets/product-images/simple-golden-lamp/simple-golden-lamp-1.png",
     secondProductImage:
-      "/assets/product-images/simple-golden-lamp/simple-golden-lamp-2.webp",
+      "./assets/product-images/simple-golden-lamp/simple-golden-lamp-2.webp",
     thirdProductImage:
-      "/assets/product-images/simple-golden-lamp/simple-golden-lamp-3.webp",
+      "./assets/product-images/simple-golden-lamp/simple-golden-lamp-3.webp",
   },
   {
     productId: 16,
@@ -292,9 +293,9 @@ export const productInfo: productInfoItemInterface[] = [
     productTexture: "Plastic",
     productWeightInLbs: 4,
     productSize: "12cm x 12cm",
-    firstProductImage: "/assets/product-images/table-lamp/table-lamp-1.png",
-    secondProductImage: "/assets/product-images/table-lamp/table-lamp-2.webp",
-    thirdProductImage: "/assets/product-images/table-lamp/table-lamp-3.webp",
+    firstProductImage: "./assets/product-images/table-lamp/table-lamp-1.png",
+    secondProductImage: "./assets/product-images/table-lamp/table-lamp-2.webp",
+    thirdProductImage: "./assets/product-images/table-lamp/table-lamp-3.webp",
   },
   {
     productId: 17,
@@ -307,11 +308,11 @@ export const productInfo: productInfoItemInterface[] = [
     productWeightInLbs: 10,
     productSize: "20cm x 20cm",
     firstProductImage:
-      "/assets/product-images/the-sun-pendant-black/the-sun-pendant-black-1.jpeg",
+      "./assets/product-images/the-sun-pendant-black/the-sun-pendant-black-1.jpeg",
     secondProductImage:
-      "/assets/product-images/the-sun-pendant-black/the-sun-pendant-black-2.webp",
+      "./assets/product-images/the-sun-pendant-black/the-sun-pendant-black-2.webp",
     thirdProductImage:
-      "/assets/product-images/the-sun-pendant-black/the-sun-pendant-black-3.jpg",
+      "./assets/product-images/the-sun-pendant-black/the-sun-pendant-black-3.jpg",
   },
   {
     productId: 18,
@@ -324,11 +325,11 @@ export const productInfo: productInfoItemInterface[] = [
     productWeightInLbs: 35,
     productSize: "60cm x 60cm",
     firstProductImage:
-      "/assets/product-images/traditional-chair/traditional-chair-1.jpg",
+      "./assets/product-images/traditional-chair/traditional-chair-1.jpg",
     secondProductImage:
-      "/assets/product-images/traditional-chair/traditional-chair-2.webp",
+      "./assets/product-images/traditional-chair/traditional-chair-2.webp",
     thirdProductImage:
-      "/assets/product-images/traditional-chair/traditional-chair-3.webp",
+      "./assets/product-images/traditional-chair/traditional-chair-3.webp",
   },
   {
     productId: 19,
@@ -341,10 +342,10 @@ export const productInfo: productInfoItemInterface[] = [
     productWeightInLbs: 0.5,
     productSize: "10cm x 10cm",
     firstProductImage:
-      "/assets/product-images/unbleached-cotton-pads-180/unbleached-cotton-pads-180-1.jpg",
+      "./assets/product-images/unbleached-cotton-pads-180/unbleached-cotton-pads-180-1.jpg",
     secondProductImage:
-      "/assets/product-images/unbleached-cotton-pads-180/unbleached-cotton-pads-180-2.jpg",
+      "./assets/product-images/unbleached-cotton-pads-180/unbleached-cotton-pads-180-2.jpg",
     thirdProductImage:
-      "/assets/product-images/unbleached-cotton-pads-180/unbleached-cotton-pads-180-3.jpg",
+      "./assets/product-images/unbleached-cotton-pads-180/unbleached-cotton-pads-180-3.jpg",
   },
 ];
