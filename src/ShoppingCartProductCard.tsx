@@ -2,15 +2,12 @@ import { productInfoItemInterface } from "./productInfo";
 import { shoppingCartItemInterface } from "./App";
 
 export default function ShoppingCartProductCard(props: any) {
-  // console.log(props.item.selectedProductId);
-  // console.log(props.productInfo);
-
   const currentCardsproductInfo = props.productInfo.find(
     (obj: productInfoItemInterface) =>
       obj.productId === props.item.selectedProductId
   );
 
-  const increaseProductQuantity = () => {
+  function increaseProductQuantity() {
     props.setUserShoppingCart(
       (prevShoppingCart: shoppingCartItemInterface[]) => {
         return prevShoppingCart.map((item) => {
@@ -21,9 +18,9 @@ export default function ShoppingCartProductCard(props: any) {
         });
       }
     );
-  };
+  }
 
-  const decreaseProductQuantity = () => {
+  function decreaseProductQuantity() {
     props.setUserShoppingCart(
       (prevShoppingCart: shoppingCartItemInterface[]) => {
         return prevShoppingCart.map((item) => {
@@ -37,7 +34,7 @@ export default function ShoppingCartProductCard(props: any) {
         });
       }
     );
-  };
+  }
 
   const removeShoppingCartItem = () => {
     props.setUserShoppingCart((prevShoppingCart: shoppingCartItemInterface[]) =>
