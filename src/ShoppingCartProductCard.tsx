@@ -10,8 +10,6 @@ export default function ShoppingCartProductCard(props: any) {
       obj.productId === props.item.selectedProductId
   );
 
-  // console.log(currentCardsproductInfo);
-
   const increaseProductQuantity = () => {
     props.setUserShoppingCart(
       (prevShoppingCart: shoppingCartItemInterface[]) => {

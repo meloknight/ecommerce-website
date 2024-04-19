@@ -19,6 +19,8 @@ function App() {
   const [shoppingCartModalOpen, setShoppingCartModalOpen] = useState(false);
   const [page, setPage] = useState("LandingPage");
   const [userShoppingCart, setUserShoppingCart] = useState([]);
+  console.log(userShoppingCart);
+
   const toggleModal = () => {
     setShoppingCartModalOpen(!shoppingCartModalOpen);
   };

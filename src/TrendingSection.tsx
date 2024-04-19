@@ -15,7 +15,6 @@ export default function TrendingSection(props: any) {
   useEffect(() => {
     const updateWidth = () => {
       if (trendingContainerRef.current) {
-        console.log(trendingContainerRef);
         const trendWidth =
           trendingContainerRef.current.getBoundingClientRect().width;
         setTrendingContainerWidth(trendWidth);
