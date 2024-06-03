@@ -2,16 +2,16 @@ import { productInfoItemInterface } from "./productInfo";
 import { shoppingCartItemInterface } from "./App";
 
 export default function ShoppingCartProductCard(props: any) {
-  const currentCardsproductInfo = props.productInfo.find(
-    (obj: productInfoItemInterface) =>
-      obj.productId === props.item.selectedProductId
+  const currentCardsProductInfo = props.productInfo.find(
+    (info: productInfoItemInterface) =>
+      info.productId === props.item.selectedProductId
   );
 
   function increaseProductQuantity() {
     props.setUserShoppingCart(
       (prevShoppingCart: shoppingCartItemInterface[]) => {
         return prevShoppingCart.map((item) => {
-          if (item.selectedProductId === currentCardsproductInfo.productId) {
+          if (item.selectedProductId === currentCardsProductInfo.productId) {
             return { ...item, value: item.quantitySelected++ };
           }
           return item;
@@ -25,7 +25,7 @@ export default function ShoppingCartProductCard(props: any) {
       (prevShoppingCart: shoppingCartItemInterface[]) => {
         return prevShoppingCart.map((item) => {
           if (
-            item.selectedProductId === currentCardsproductInfo.productId &&
+            item.selectedProductId === currentCardsProductInfo.productId &&
             item.quantitySelected > 1
           ) {
             return { ...item, value: item.quantitySelected-- };
@@ -39,7 +39,7 @@ export default function ShoppingCartProductCard(props: any) {
   const removeShoppingCartItem = () => {
     props.setUserShoppingCart((prevShoppingCart: shoppingCartItemInterface[]) =>
       prevShoppingCart.filter(
-        (item) => item.selectedProductId !== currentCardsproductInfo.productId
+        (item) => item.selectedProductId !== currentCardsProductInfo.productId
       )
     );
   };
@@ -48,13 +48,13 @@ export default function ShoppingCartProductCard(props: any) {
     <div className="shopping-cart-product-card">
       <div className="shopping-cart-card-left-container">
         <img
-          src={currentCardsproductInfo.firstProductImage}
-          alt={currentCardsproductInfo.productName}
+          src={currentCardsProductInfo.firstProductImage}
+          alt={currentCardsProductInfo.productName}
         />
       </div>
       <div className="shopping-cart-card-center-container">
         <div className="shopping-cart-card-product-name">
-          {currentCardsproductInfo.productName}
+          {currentCardsProductInfo.productName}
         </div>
         <div className="shopping-cart-card-product-amount-container">
           <button onClick={decreaseProductQuantity}>-</button>
@@ -64,7 +64,7 @@ export default function ShoppingCartProductCard(props: any) {
       </div>
       <div className="shopping-cart-card-right-container">
         <div>
-          ${props.item.quantitySelected * currentCardsproductInfo.productPrice}
+          ${props.item.quantitySelected * currentCardsProductInfo.productPrice}
         </div>
         <button onClick={removeShoppingCartItem}>X</button>
       </div>
