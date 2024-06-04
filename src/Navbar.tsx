@@ -37,6 +37,14 @@ export default function Navbar(props: any) {
     height: hamburgerMenuActive ? "200px" : "0",
   };
 
+  const numberOfItemsInShoppingCart = (userCart: any) => {
+    let sum: number = 0;
+    for (let i = 0; i < userCart.length; i++) {
+      sum += userCart[i].quantitySelected;
+    }
+    return sum;
+  };
+
   return (
     <>
       <nav style={navbarStyle}>
@@ -90,7 +98,8 @@ export default function Navbar(props: any) {
             >
               {props.userShoppingCart.length ? (
                 <div className="shopping-cart-icon-counter">
-                  {props.userShoppingCart.length}
+                  {/* {props.userShoppingCart.length} */}
+                  {numberOfItemsInShoppingCart(props.userShoppingCart)}
                 </div>
               ) : (
                 ""
