@@ -1,3 +1,5 @@
+// TEST BRANCH!!
+
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import LandingPageBody from "./LandingPageBody";
@@ -18,6 +20,7 @@ export interface shoppingCartItemInterface {
 function App() {
   const [shoppingCartModalOpen, setShoppingCartModalOpen] = useState(false);
   const [page, setPage] = useState("LandingPage");
+
   const [userShoppingCart, setUserShoppingCart] = useState([]);
   console.log(userShoppingCart);
 
