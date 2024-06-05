@@ -10,7 +10,7 @@ import ShoppingCartModal from "./ShoppingCartModal";
 import ProductPage from "./ProductPage";
 import "./app.scss";
 
-import { productInfo as pInfo } from "./productInfo";
+// import { productInfo as pInfo } from "./productInfo";
 
 export interface shoppingCartItemInterface {
   selectedProductId: number;
@@ -22,7 +22,7 @@ function App() {
   const [page, setPage] = useState("LandingPage");
 
   const [userShoppingCart, setUserShoppingCart] = useState([]);
-  console.log(userShoppingCart);
+  // console.log(userShoppingCart);
 
   const toggleModal = () => {
     setShoppingCartModalOpen(!shoppingCartModalOpen);
@@ -80,7 +80,7 @@ function App() {
         shoppingCartModalOpen={shoppingCartModalOpen}
         userShoppingCart={userShoppingCart}
         setUserShoppingCart={setUserShoppingCart}
-        pInfo={pInfo}
+        // pInfo={pInfo}
       />
       <Navbar
         setPage={setPage}

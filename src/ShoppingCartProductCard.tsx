@@ -1,45 +1,53 @@
-import { productInfoItemInterface } from "./productInfo";
-import { shoppingCartItemInterface } from "./App";
+// import { productInfoItemInterface } from "./productInfo";
+// import { shoppingCartItemInterface } from "./App";
+// import { productInfo } from "./productInfo";
 
-export default function ShoppingCartProductCard(props: any) {
-  const currentCardsProductInfo = props.productInfo.find(
-    (info: productInfoItemInterface) =>
-      info.productId === props.item.selectedProductId
-  );
+type shoppingCartCardPropsType = {
+  setUserShoppingCart: any;
+  userShoppingCart: any;
+  item: any;
+  // item: shoppingCartItemInterface;
+  productInfo: any;
+};
 
-  function increaseProductQuantity() {
-    props.setUserShoppingCart(
-      (prevShoppingCart: shoppingCartItemInterface[]) => {
-        return prevShoppingCart.map((item) => {
-          if (item.selectedProductId === currentCardsProductInfo.productId) {
-            return { ...item, value: item.quantitySelected++ };
-          }
-          return item;
-        });
-      }
+export default function ShoppingCartProductCard({
+  setUserShoppingCart,
+  userShoppingCart,
+  item,
+  productInfo,
+}: shoppingCartCardPropsType) {
+  // console.log(item.selectedProductId);
+
+  const cardProduct: any = productInfo.filter(
+    (product: any) => product.productId === item.selectedProductId
+  )[0];
+
+  const incrementQuantity = () => {
+    setUserShoppingCart(
+      userShoppingCart.map((cartItem: any) =>
+        cartItem.selectedProductId === item.selectedProductId
+          ? { ...cartItem, quantitySelected: cartItem.quantitySelected + 1 }
+          : cartItem
+      )
     );
-  }
+  };
 
-  function decreaseProductQuantity() {
-    props.setUserShoppingCart(
-      (prevShoppingCart: shoppingCartItemInterface[]) => {
-        return prevShoppingCart.map((item) => {
-          if (
-            item.selectedProductId === currentCardsProductInfo.productId &&
-            item.quantitySelected > 1
-          ) {
-            return { ...item, value: item.quantitySelected-- };
-          }
-          return item;
-        });
-      }
-    );
-  }
+  const decrementQuantity = () => {
+    if (item.quantitySelected > 1) {
+      setUserShoppingCart(
+        userShoppingCart.map((cartItem: any) =>
+          cartItem.selectedProductId === item.selectedProductId
+            ? { ...cartItem, quantitySelected: cartItem.quantitySelected - 1 }
+            : cartItem
+        )
+      );
+    }
+  };
 
-  const removeShoppingCartItem = () => {
-    props.setUserShoppingCart((prevShoppingCart: shoppingCartItemInterface[]) =>
-      prevShoppingCart.filter(
-        (item) => item.selectedProductId !== currentCardsProductInfo.productId
+  const removeItemFromCart = () => {
+    setUserShoppingCart(
+      userShoppingCart.filter(
+        (cartItem: any) => cartItem.selectedProductId !== item.selectedProductId
       )
     );
   };
@@ -48,25 +56,23 @@ export default function ShoppingCartProductCard(props: any) {
     <div className="shopping-cart-product-card">
       <div className="shopping-cart-card-left-container">
         <img
-          src={currentCardsProductInfo.firstProductImage}
-          alt={currentCardsProductInfo.productName}
+          src={cardProduct.firstProductImage}
+          alt={cardProduct.productName}
         />
       </div>
       <div className="shopping-cart-card-center-container">
         <div className="shopping-cart-card-product-name">
-          {currentCardsProductInfo.productName}
+          {cardProduct.productName}
         </div>
         <div className="shopping-cart-card-product-amount-container">
-          <button onClick={decreaseProductQuantity}>-</button>
-          <div>{props.item.quantitySelected}</div>
-          <button onClick={increaseProductQuantity}>+</button>
+          <button onClick={() => decrementQuantity()}>-</button>
+          <div>{item.quantitySelected}</div>
+          <button onClick={() => incrementQuantity()}>+</button>
         </div>
       </div>
       <div className="shopping-cart-card-right-container">
-        <div>
-          ${props.item.quantitySelected * currentCardsProductInfo.productPrice}
-        </div>
-        <button onClick={removeShoppingCartItem}>X</button>
+        <div>${item.quantitySelected * cardProduct.productPrice}</div>
+        <button onClick={() => removeItemFromCart()}>X</button>
       </div>
     </div>
   );
