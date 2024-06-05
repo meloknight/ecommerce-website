@@ -1,19 +1,33 @@
+import { shoppingCartItemInterface } from "./App";
 import ShoppingCartProductCard from "./ShoppingCartProductCard";
 import { productInfo } from "./productInfo";
-// userShoppingCart was passed as a prop to ShoppingCartModal
-export default function ShoppingCartModal(props: any) {
-  // console.log(props);
+// import { shoppingCartItemInterface } from "./App";
 
+type shoppingCartModalPropsType = {
+  toggleModal: () => void;
+  shoppingCartModalOpen: boolean;
+  // userShoppingCart: shoppingCartItemInterface[];
+  userShoppingCart: any;
+  setUserShoppingCart: any;
+};
+
+export default function ShoppingCartModal(props: shoppingCartModalPropsType) {
+  const {
+    toggleModal,
+    shoppingCartModalOpen,
+    userShoppingCart,
+    setUserShoppingCart,
+  } = props;
   function shoppingCartSubtotal(): number {
-    if (props.userShoppingCart !== false) {
+    if (userShoppingCart !== false) {
       let sum: number = 0;
-      for (let i = 0; i < props.userShoppingCart.length; i++) {
-        let id: number = props.userShoppingCart[i].selectedProductId;
-        const prePrice: any = props.pInfo.find(
+      for (let i = 0; i < userShoppingCart.length; i++) {
+        let id: number = userShoppingCart[i].selectedProductId;
+        const prePrice: any = productInfo.find(
           (product: any) => product.productId === id
         );
         const price: number = prePrice.productPrice;
-        sum += props.userShoppingCart[i].quantitySelected * price;
+        sum += userShoppingCart[i].quantitySelected * price;
       }
       return sum;
     }
@@ -22,36 +36,37 @@ export default function ShoppingCartModal(props: any) {
 
   return (
     <>
-      {props.shoppingCartModalOpen && (
+      {shoppingCartModalOpen && (
         <div
           onClick={() => {
-            props.toggleModal();
+            toggleModal();
           }}
           className="shopping-cart-modal-transparent-backdrop"
         ></div>
       )}
       <div
         className={`shopping-cart-modal-container ${
-          props.shoppingCartModalOpen && "shopping-cart-modal-container-active"
+          shoppingCartModalOpen && "shopping-cart-modal-container-active"
         }`}
       >
         <div className="shopping-cart-modal-top-container">
           <h1>Your Shopping Cart</h1>
           <button
             onClick={() => {
-              props.toggleModal();
+              toggleModal();
             }}
           >
             X
           </button>
         </div>
         <div className="shopping-cart-modal-product-list-container">
-          {props.userShoppingCart.map((item: any) => (
+          {userShoppingCart.map((item: shoppingCartItemInterface) => (
             <ShoppingCartProductCard
               key={item.selectedProductId}
-              setUserShoppingCart={props.setUserShoppingCart}
-              productInfo={productInfo}
+              setUserShoppingCart={setUserShoppingCart}
+              userShoppingCart={userShoppingCart}
               item={item}
+              productInfo={productInfo}
             />
           ))}
         </div>
